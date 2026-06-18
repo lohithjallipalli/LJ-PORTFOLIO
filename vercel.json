@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd rear-designer-portfolio && npm install && npm run build",
+  "outputDirectory": "rear-designer-portfolio/dist"
+}
