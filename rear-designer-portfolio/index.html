@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LJ Portfolio</title>
+    <!-- Prevent color flashing start -->
+    <style>
+      html[data-theme="light"] {
+        background: #efeff1;
+      }
+      html[data-theme="dark"] {
+        background: #0a0a0c;
+      }
+    </style>
+    <!-- javascript to prevent color flashing -->
+    <script>
+      (function () {
+        const storageKey = "theme";
+        function setTheme(darkMode) {
+          document.documentElement.setAttribute(
+            "data-theme",
+            darkMode ? "dark" : "light"
+          );
+        }
+        const mql = window.matchMedia("(prefers-color-scheme:dark)");
+        const storedTheme = localStorage.getItem(storageKey);
+        const darkMode = storedTheme ? JSON.parse(storedTheme) : mql.matches;
+        setTheme(darkMode);
+        localStorage.setItem(storageKey, darkMode);
+      })();
+    </script>
+    <!-- Prevent color flashing end -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
