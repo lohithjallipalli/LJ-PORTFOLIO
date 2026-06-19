@@ -131,7 +131,7 @@ export const projectsData = [
     ]
   },
   {
-    title: 'Moive recommendation System',
+    title: 'Movie recommendation System',
     role: 'REAL-TIME WEB APPLICATION',
     duration: '2 months',
     type: 'Personal Project',
