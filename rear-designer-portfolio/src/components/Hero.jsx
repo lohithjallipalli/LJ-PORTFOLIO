@@ -17,7 +17,7 @@ export default function Hero() {
               Available for opportunities
             </div>
             <h1 className="title hero-title">
-              I'm <span className="theme-gradient-text">Lohith</span><br />
+              I'm <span className="theme-gradient-text">Lohith Jallipalli</span><br />
               Software Developer
             </h1>
             <p className="description">
