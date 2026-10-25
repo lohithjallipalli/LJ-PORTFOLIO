@@ -29,7 +29,13 @@ function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme !== null) {
-      return JSON.parse(storedTheme);
+      try {
+        return JSON.parse(storedTheme);
+      } catch {
+        // Handle stale plain-string values like "light" or "dark"
+        localStorage.removeItem('theme');
+        return storedTheme === 'dark';
+      }
     }
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });

@@ -1,14 +1,9 @@
 export const themeColors = {
   'Midnight Violet': { primary: '#a855f7', accent: '#7e22ce', light: '#c084fc' },
-  'Crimson Night': { primary: '#e11d48', accent: '#be123c', light: '#fda4af' },
-  'Ocean Sunset': { primary: '#f97316', accent: '#ea580c', light: '#ffedd5' },
-  'Teal Aurora': { primary: '#0d9488', accent: '#0f766e', light: '#2dd4bf' },
-  'Luxury Gold': { primary: '#eab308', accent: '#ca8a04', light: '#fef08a' },
-  'Obsidian Rose': { primary: '#f43f5e', accent: '#be123c', light: '#fda4af' },
-  'Slate Citrus': { primary: '#f59e0b', accent: '#d97706', light: '#fde047' },
-  'Neon Electric': { primary: '#84cc16', accent: '#65a30d', light: '#bef264' },
-  'Vivid Cyan': { primary: '#06b6d4', accent: '#0891b2', light: '#67e8f9' },
-  'Forest Green': { primary: '#22c55e', accent: '#16a34a', light: '#86efac' },
+  'Arctic Blue':     { primary: '#3b82f6', accent: '#1d4ed8', light: '#93c5fd' },
+  'Crimson':         { primary: '#e11d48', accent: '#be123c', light: '#fda4af' },
+  'Emerald':         { primary: '#10b981', accent: '#059669', light: '#6ee7b7' },
+  'Luxury Gold':     { primary: '#eab308', accent: '#ca8a04', light: '#fef08a' },
 };
 
 export const skillsData = [
@@ -56,15 +51,6 @@ export const skillsData = [
     icon: 'Layers',
     color: '#a855f7',
     description: 'Designed, integrated, and consumed REST APIs to facilitate secure and scalable data exchange between applications and services.'
-  },
-  {
-    name: 'Firebase',
-    category: 'FRAMEWORKS & BAAS',
-    level: 'BEGINNER',
-    percentage: 30,
-    icon: 'Flame',
-    color: '#f97316',
-    description: 'Basic experience with Firebase services, including authentication and cloud-based backend features for rapid application development.'
   },
   {
     name: 'MongoDB',
@@ -126,31 +112,6 @@ export const projectsData = [
           'Created secure user authentication using JWT and role-based access control.',
           'Designed budget analytics and metric comparisons utilizing Chart.js.',
           'Implemented dynamic deadline warning banners and alert notifications.'
-        ]
-      }
-    ]
-  },
-  {
-    title: 'Movie recommendation System',
-    role: 'REAL-TIME WEB APPLICATION',
-    duration: '2 months',
-    type: 'Personal Project',
-    location: 'Remote',
-    tags: ['ReactJS', 'MYSQL', 'ML', 'Tailwind', 'Realtime'],
-    link: 'https://github.com/lohithjallipalli',
-    description: 'A cutting-edge video conferencing application featuring real-time virtual meetings, chat, screen sharing, and interactive UI animations.',
-    longDescription: 'An intelligent full-stack web application that provides personalized movie recommendations based on user preferences and viewing patterns. The system combines machine learning algorithms with a responsive user interface to enhance movie discovery and user engagement.',
-    skills: ['ReactJS', 'MachineLearning', 'REST API', 'Tailwind', 'Realtime', 'Node.js', 'MYSQL'],
-    keyProjects: [
-      {
-        title: 'Lobby & Streaming Controller',
-        github: 'https://github.com/lohithjallipalli',
-        description: 'Implemented low-latency audio/video streaming rooms using ZegoCloud WebRTC SDKs with customized local stream controls.',
-        tags: ['ReactJS', 'WebRTC', 'ZegoCloud', 'Java', 'React.JS'],
-        bullets: [
-          'Integrated a machine learning recommendation engine using collaborative filtering and content-based filtering techniques to generate personalized movie suggestions.',
-          'Designed and optimized MySQL database schemas to ensure efficient data retrieval and improved application performance.',
-          'Applied full-stack development principles, API integration, database management, and machine learning concepts in a real-world project.'
         ]
       }
     ]
