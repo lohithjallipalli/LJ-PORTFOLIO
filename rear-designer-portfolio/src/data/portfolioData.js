@@ -1,12 +1,39 @@
 export const themeColors = {
   'Midnight Violet': { primary: '#a855f7', accent: '#7e22ce', light: '#c084fc' },
-  'Arctic Blue':     { primary: '#3b82f6', accent: '#1d4ed8', light: '#93c5fd' },
-  'Crimson':         { primary: '#e11d48', accent: '#be123c', light: '#fda4af' },
-  'Emerald':         { primary: '#10b981', accent: '#059669', light: '#6ee7b7' },
-  'Luxury Gold':     { primary: '#eab308', accent: '#ca8a04', light: '#fef08a' },
+  'Arctic Blue': { primary: '#3b82f6', accent: '#1d4ed8', light: '#93c5fd' },
+  'Crimson': { primary: '#e11d48', accent: '#be123c', light: '#fda4af' },
+  'Emerald': { primary: '#10b981', accent: '#059669', light: '#6ee7b7' },
+  'Luxury Gold': { primary: '#eab308', accent: '#ca8a04', light: '#fef08a' },
 };
 
 export const skillsData = [
+  {
+    name: 'ServiceNow Administration',
+    category: 'SERVICENOW',
+    level: 'PROFICIENT',
+    percentage: 80,
+    icon: 'Shield',
+    color: '#00c7b1',
+    description: 'Hands-on experience with ServiceNow platform administration including Users, Groups, Roles, ACLs, CMDB, UI Policies, and Flow Designer — enabling scalable, governed IT service workflows.'
+  },
+  {
+    name: 'ITSM Fundamentals',
+    category: 'SERVICENOW',
+    level: 'PROFICIENT',
+    percentage: 80,
+    icon: 'ClipboardList',
+    color: '#6366f1',
+    description: 'Strong foundation in IT Service Management processes including Incident Management, Problem Management, and Change Request handling aligned with ITIL best practices.'
+  },
+  {
+    name: 'ServiceNow Scripting',
+    category: 'SERVICENOW',
+    level: 'INTERMEDIATE',
+    percentage: 70,
+    icon: 'FileCode',
+    color: '#f59e0b',
+    description: 'Experienced in ServiceNow scripting using Client Scripts, Business Rules, Script Includes, and Glide APIs to automate processes and extend platform capabilities.'
+  },
   {
     name: 'Java (Primary)',
     category: 'LANGUAGES',
@@ -99,6 +126,7 @@ export const projectsData = [
     location: 'Hyderabad, India',
     tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'MERN Stack'],
     link: 'https://github.com/lohithjallipalli/Pro-Man',
+    liveLink: 'https://pro-man-eight.vercel.app/',
     description: 'Developed PRO-MAN for project management tasks including team tracking, budget analysis, and project deadlines during EY GDS internship.',
     longDescription: 'Developed PRO-MAN, a comprehensive project management dashboard system designed for teams to track milestones, budget allocations, dead-ends, and performance metrics dynamically during the EY Global Delivery Services internship.',
     skills: ['React.js', 'Node.js', 'Express', 'MongoDB', 'MERN Stack', 'Redux', 'Chart.js', 'REST APIs'],
@@ -166,6 +194,16 @@ export const tabData = {
   ],
   Experience: [
     {
+      title: 'Servicenow Trainee',
+      date: 'Aug 2026 – October 2026',
+      subtitle: 'Sri Sathya Sai Skill Development Center',
+      bullets: [
+        'Gained Hands-on experience with ServiceNow platform administration including Users, Groups, Roles, ACLs, CMDB, UI Policies, and Flow Designer  ',
+        'Strong foundation in IT Service Management processes including Incident Management, Problem Management',
+        'Experienced in ServiceNow scripting using Client Scripts, Business Rules, Script Includes, and Glide APIs to automate processes and extend platform capabilities.',
+      ],
+    },
+    {
       title: 'Intern at EY Global Delivery Services & AICTE',
       date: 'Feb 2025 – Mar 2025',
       subtitle: 'EY Edutech',
@@ -187,6 +225,15 @@ export const tabData = {
     },
   ],
   Certificates: [
+    {
+      title: 'Servicenow Trainee ',
+      date: 'October 2026',
+      subtitle: 'Servicenow Training At SSSSO',
+      link: '/assets/SSSSO.png',
+      bullets: [
+        'Successfully completed a 45-Day (165-hour) ServiceNow Training( Administration, Scripting,ITSM - Fundamentals) - RPL 2026 at Sri Sathya Sai Skill Development Center,',
+      ],
+    },
     {
       title: 'MERN Stack Developer',
       date: 'March 2025',

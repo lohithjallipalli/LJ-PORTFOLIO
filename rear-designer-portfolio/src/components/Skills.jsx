@@ -10,6 +10,9 @@ import {
   Wrench,
   GitBranch,
   Binary,
+  Shield,
+  ClipboardList,
+  FileCode,
   X
 } from 'lucide-react';
 import { skillsData } from '../data/portfolioData';
@@ -62,6 +65,9 @@ const iconMap = {
   Wrench: <Wrench size={20} />,
   GitBranch: <GitBranch size={20} />,
   Binary: <Binary size={20} />,
+  Shield: <Shield size={20} />,
+  ClipboardList: <ClipboardList size={20} />,
+  FileCode: <FileCode size={20} />,
 };
 
 const modalIconMap = {
@@ -75,6 +81,9 @@ const modalIconMap = {
   Wrench: <Wrench size={24} />,
   GitBranch: <GitBranch size={24} />,
   Binary: <Binary size={24} />,
+  Shield: <Shield size={24} />,
+  ClipboardList: <ClipboardList size={24} />,
+  FileCode: <FileCode size={24} />,
 };
 
 export default function Skills() {
@@ -102,7 +111,7 @@ export default function Skills() {
         {/* Filter and Search Bar */}
         <div className="skills-controls-container">
           <div className="skills-filter-tabs">
-            {['ALL ARSENAL', 'LANGUAGES', 'FRAMEWORKS & BAAS', 'DATABASES & DEVOPS'].map((cat) => (
+            {['ALL ARSENAL', 'SERVICENOW', 'LANGUAGES', 'FRAMEWORKS & BAAS', 'DATABASES & DEVOPS'].map((cat) => (
               <button
                 key={cat}
                 className={`skills-filter-btn ${selectedSkillCategory === cat ? 'active' : ''}`}

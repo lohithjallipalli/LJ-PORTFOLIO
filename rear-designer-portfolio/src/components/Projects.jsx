@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Calendar, MapPin, ArrowUpRight, X } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, ArrowUpRight, ExternalLink, X } from 'lucide-react';
 import CustomIcon from './CustomIcon';
 import { projectsData } from '../data/portfolioData';
 
@@ -55,15 +55,28 @@ export default function Projects() {
                 </div>
               </div>
 
-              <button 
-                className="project-view-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedProjectDetails(project);
-                }}
-              >
-                VIEW DETAILS <ArrowUpRight size={14} />
-              </button>
+              <div className="project-card-actions">
+                <button 
+                  className="project-view-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProjectDetails(project);
+                  }}
+                >
+                  VIEW DETAILS <ArrowUpRight size={14} />
+                </button>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-live-btn"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    LIVE DEMO <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -89,6 +102,17 @@ export default function Projects() {
                     title="View GitHub Repository"
                   >
                     <CustomIcon name="github" />
+                  </a>
+                )}
+                {selectedProjectDetails.liveLink && (
+                  <a
+                    href={selectedProjectDetails.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-modal-live-link"
+                    title="View Live Demo"
+                  >
+                    <ExternalLink size={20} />
                   </a>
                 )}
               </div>
