@@ -6,13 +6,13 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC0TYBUy88EchwCAjyyXEmiUnKRvFqSACA",
-  authDomain: "lohith-portfolio-49686.firebaseapp.com",
-  databaseURL: "https://lohith-portfolio-49686-default-rtdb.firebaseio.com/",
-  projectId: "lohith-portfolio-49686",
-  storageBucket: "lohith-portfolio-49686.firebasestorage.app",
-  messagingSenderId: "1019462065863",
-  appId: "1:1019462065863:web:e73e3fd71581038b6fe8e2"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
