@@ -13,11 +13,9 @@ function VisitorCounter() {
 
   useEffect(() => {
     // If Firebase isn't configured, increment a persistent local visit counter
-    const isPlaceholder = !db?.app?.options?.apiKey ||
-      db.app.options.apiKey === 'YOUR_API_KEY' ||
-      db.app.options.apiKey.includes('YOUR_');
+    const isConfigured = Boolean(db && db.app && db.app.options && db.app.options.apiKey && !db.app.options.apiKey.includes('YOUR_'));
 
-    if (isPlaceholder) {
+    if (!isConfigured) {
       const current = parseInt(localStorage.getItem('visitor_local_count') || '48', 10) + 1;
       localStorage.setItem('visitor_local_count', current);
       setCount(current);
