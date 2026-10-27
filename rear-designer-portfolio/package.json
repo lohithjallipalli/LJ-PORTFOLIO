@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
+    "firebase": "^13.1.0",
     "gsap": "^3.15.0",
     "highlight.js": "^11.11.1",
     "lucide-react": "^1.17.0",

@@ -14,6 +14,8 @@ import Journey from './components/Journey';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeSelector from './components/ThemeSelector';
+import IntroScreen from './components/IntroScreen';
+import VisitorCounter from './components/VisitorCounter';
 
 import { themeColors } from './data/portfolioData';
 
@@ -43,6 +45,13 @@ function App() {
   const [isDropped, setIsDropped] = useState(false);
   const [activeSection, setActiveSection] = useState('header');
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
+  const [visitorPurpose, setVisitorPurpose] = useState(null);
+
+  const handleIntroComplete = (purpose) => {
+    setVisitorPurpose(purpose);
+    setShowIntro(false);
+  };
 
   // Apply accent theme variables
   useEffect(() => {
@@ -178,6 +187,7 @@ function App() {
 
   return (
     <div ref={appRef}>
+      {showIntro && <IntroScreen onComplete={handleIntroComplete} />}
       <Navbar
         isDropped={isDropped}
         activeSection={activeSection}
@@ -201,6 +211,7 @@ function App() {
         setAccentTheme={setAccentTheme}
         themeColors={themeColors}
       />
+      <VisitorCounter />
     </div>
   );
 }
