@@ -108,7 +108,7 @@ export const skillsData = [
   },
   {
     name: 'Data Structures & Algorithms',
-    category: 'DATABASES & DEVOPS',
+    category: 'DATABASES ',
     level: 'PROFICIENT',
     percentage: 70,
     icon: 'Binary',
@@ -118,6 +118,33 @@ export const skillsData = [
 ];
 
 export const projectsData = [
+  {
+    title: 'LeaveFlow - ServiceNow',
+    role: 'SERVICENOW APPLICATION & PORTAL',
+    duration: '1 month',
+    type: 'Scoped Application',
+    location: 'Remote',
+    tags: ['ServiceNow', 'Next Experience', 'Business Rules', 'WorkFlow Studio', 'GlideAPI\'s', 'Script Includes', 'REST API'],
+    link: 'https://github.com/lohithjallipalli/LeaveFlow-ServiceNow',
+    liveLink: null,
+    description: 'Developed LeaveFlow, an enterprise-grade leave management portal and scoped application on ServiceNow (Brazil release) with self-service, approval automation, and team calendars.',
+    longDescription: 'Developed LeaveFlow, a smart leave management portal and scoped application built on ServiceNow (Brazil PDI). Utilizing ServiceNow Next Experience  and Flow Designer, it streamlines time-off submissions, manager approvals, real-time balance tracking, and team availability calendars while replacing manual spreadsheets and email threads.',
+    skills: ['ServiceNow (Brazil PDI)', 'Next Experience ', 'Script Includes', 'GlideScript & Business Rules', 'ACL Security & RBAC', 'REST API Integration', 'Data Resources'],
+    keyProjects: [
+      {
+        title: 'LeaveFlow Portal & Approval Automation',
+        github: 'https://github.com/lohithjallipalli/LeaveFlow-ServiceNow',
+        description: 'Engineered a modern ServiceNow scoped application featuring role-based dashboards, automated approval workflows, and external holiday API integration.',
+        tags: ['ServiceNow', 'UI Builder', 'GlideRecord', 'Nager.Date API', 'ACLs'],
+        bullets: [
+          'Engineered an intuitive Next Experience Forms with employee self-service forms, real-time KPI balance types (Annual, Sick, Casual, Comp), and manager approval queues.',
+          'Built custom Script Includes (ManagerLeaveActions, LeaveRequestUtils) and Business Rules for live date validation, automatic duration calculations, and overlap checking.',
+          'Configured enterprise Role-Based Access Control (RBAC) and ACL containment hierarchy (Admin > Manager > Employee) alongside query business rules to guarantee strict data segregation.',
+          'Integrated Nager.Date external REST API for real-time upcoming public holiday synchronization and built CSV export utilities for user leave histories.'
+        ]
+      }
+    ]
+  },
   {
     title: 'PRO-MAN',
     role: 'PROJECT MANAGEMENT WEB APPLICATION',

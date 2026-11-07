@@ -65,7 +65,7 @@ export default function Projects() {
                 >
                   VIEW DETAILS <ArrowUpRight size={14} />
                 </button>
-                {project.liveLink && (
+                {project.liveLink ? (
                   <a
                     href={project.liveLink}
                     target="_blank"
@@ -75,7 +75,17 @@ export default function Projects() {
                   >
                     LIVE DEMO <ExternalLink size={14} />
                   </a>
-                )}
+                ) : project.link && project.link !== '#' ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-live-btn"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    GITHUB REPO <ExternalLink size={14} />
+                  </a>
+                ) : null}
               </div>
             </div>
           ))}
