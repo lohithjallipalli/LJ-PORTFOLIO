@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 import CustomIcon from './CustomIcon';
 import Odometer from './Odometer';
 
@@ -29,16 +30,25 @@ export default function Hero() {
             </p>
             <div className="flex buttons">
               <div className="flex social__handles">
-                <a href="https://leetcode.com/u/lohithJallipalli/" target="_blank" rel="noopener noreferrer" className="icon__container handle">
+                <a href="https://leetcode.com/u/lohithJallipalli/" target="_blank" rel="noopener noreferrer" className="icon__container handle" title="LeetCode">
                   <CustomIcon name="leetcode" />
                 </a>
-                <a href="https://github.com/lohithjallipalli" target="_blank" rel="noopener noreferrer" className="icon__container handle">
+                <a href="https://github.com/lohithjallipalli" target="_blank" rel="noopener noreferrer" className="icon__container handle" title="GitHub">
                   <CustomIcon name="github" />
                 </a>
-                <a href="https://www.linkedin.com/in/lohith-j-380102200/" target="_blank" rel="noopener noreferrer" className="icon__container handle">
+                <a href="https://www.linkedin.com/in/lohith-j-380102200/" target="_blank" rel="noopener noreferrer" className="icon__container handle" title="LinkedIn">
                   <CustomIcon name="linkedin" />
                 </a>
               </div>
+              <a
+                href="https://learning.servicenow.com/lxp?id=nl_public&user=lohith8919344860"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn hero-servicenow-btn"
+              >
+                ServiceNow profile
+                <ExternalLink size={16} />
+              </a>
               <a href="#contact" className="btn btn__primary">Contact Me</a>
             </div>
           </div>
