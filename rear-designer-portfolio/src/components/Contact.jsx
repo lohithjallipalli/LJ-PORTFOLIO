@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { AtSign, Phone, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { db } from '../firebase';
+import { ref, push } from 'firebase/database';
 import CustomIcon from './CustomIcon';
 
 export default function Contact() {
@@ -25,7 +27,7 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Basic Validation
@@ -40,71 +42,83 @@ export default function Contact() {
 
     setStatus({ loading: true, success: null, error: null });
 
+    let savedToFirebase = false;
+    let emailSent = false;
+
+    // 1. Save message to Firebase Realtime Database (so messages are never lost)
+    if (db) {
+      try {
+        const messagesRef = ref(db, 'messages');
+        await push(messagesRef, {
+          firstname: formData.firstname.trim(),
+          lastname: formData.lastname.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim() || 'N/A',
+          message: formData.message.trim(),
+          createdAt: new Date().toISOString(),
+          timestamp: Date.now()
+        });
+        savedToFirebase = true;
+      } catch (fbErr) {
+        console.warn('Firebase Realtime Database write warning:', fbErr);
+      }
+    }
+
+    // 2. Send email via EmailJS (so you receive it directly in your inbox)
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Check if variables are configured
-    const isPlaceholder = !serviceId || !templateId || !publicKey ||
-      serviceId.includes('your_') ||
-      templateId.includes('your_') ||
-      publicKey.includes('your_');
+    const isEmailConfigured = serviceId && templateId && publicKey &&
+      !serviceId.includes('your_') &&
+      !templateId.includes('your_') &&
+      !publicKey.includes('your_');
 
-    if (isPlaceholder) {
-      // Simulate real-time success for local testing/demo if keys are not set up
-      setTimeout(() => {
-        console.warn("EmailJS: Using demo mode. Set your actual credentials in the .env file.");
-        setStatus({
-          loading: false,
-          success: true,
-          error: null
+    if (isEmailConfigured) {
+      const templateParams = {
+        from_name: `${formData.firstname} ${formData.lastname}`.trim(),
+        reply_to: formData.email,
+        phone: formData.phone || 'N/A',
+        message: formData.message,
+        to_email: 'lohithjallipalli@gmail.com',
+        to_name: 'Lohith'
+      };
+
+      try {
+        await emailjs.send(serviceId, templateId, templateParams, {
+          publicKey: publicKey
         });
-        setFormData({
-          firstname: '',
-          lastname: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      }, 1500);
-      return;
+        emailSent = true;
+      } catch (emailErr) {
+        console.error('EmailJS send error:', emailErr);
+      }
+    } else {
+      console.warn(
+        'EmailJS is not configured. To receive emails in your inbox, add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.'
+      );
     }
 
-    const templateParams = {
-      from_name: `${formData.firstname} ${formData.lastname}`.trim(),
-      reply_to: formData.email,
-      phone: formData.phone || 'N/A',
-      message: formData.message,
-      to_email: 'lohithjallipalli@gmail.com',
-      to_name: 'Lohith'
-    };
-
-    emailjs.send(serviceId, templateId, templateParams, {
-      publicKey: publicKey
-    })
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setStatus({
-          loading: false,
-          success: true,
-          error: null
-        });
-        setFormData({
-          firstname: '',
-          lastname: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
-        setStatus({
-          loading: false,
-          success: false,
-          error: 'Failed to send message. Please check your credentials or try again later.'
-        });
+    // Determine final status
+    if (savedToFirebase || emailSent) {
+      setStatus({
+        loading: false,
+        success: true,
+        error: null
       });
+      setFormData({
+        firstname: '',
+        lastname: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } else {
+      setStatus({
+        loading: false,
+        success: false,
+        error: 'Failed to send message. Please ensure Firebase or EmailJS credentials are configured.'
+      });
+    }
   };
 
   return (
