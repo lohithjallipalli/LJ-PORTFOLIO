@@ -36,7 +36,7 @@ export default function Hero() {
                 <a href="https://github.com/lohithjallipalli" target="_blank" rel="noopener noreferrer" className="icon__container handle" title="GitHub">
                   <CustomIcon name="github" />
                 </a>
-                <a href="https://www.linkedin.com/in/lohith-j-380102200/" target="_blank" rel="noopener noreferrer" className="icon__container handle" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/jlohith11/" target="_blank" rel="noopener noreferrer" className="icon__container handle" title="LinkedIn">
                   <CustomIcon name="linkedin" />
                 </a>
               </div>
