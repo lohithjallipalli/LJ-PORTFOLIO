@@ -119,6 +119,33 @@ export const skillsData = [
 
 export const projectsData = [
   {
+    title: 'Chess Analyzer',
+    role: 'CLIENT-SIDE CHESS ANALYTICS PLATFORM',
+    duration: '1 month',
+    type: 'Personal Project',
+    location: 'Remote',
+    tags: ['Next.js', 'React', 'Stockfish WASM', 'Chess.js', 'Web Audio API', 'Recharts'],
+    link: 'https://github.com/lohithjallipalli/Chess-Analyzer.git',
+    liveLink: 'https://chess-analyzer-self.vercel.app/',
+    description: 'A client-side chess analysis web app powered by Stockfish WASM, featuring move classification, tactical suggestions, accuracy graphs, and interactive AI coaching.',
+    longDescription: 'Developed Chess Analyzer, a next-generation client-side chess analytics web platform built with Next.js and Stockfish WebAssembly. It runs chess engine evaluations 100% inside the browser via WebAssembly workers with zero backend compute, delivering instant move classifications (brilliant, best, blunder), win-rate curves, interactive AI coaching insights, and seamless Chess.com game imports.',
+    skills: ['Next.js 14', 'React 18', 'Stockfish (WASM)', 'Chess.js', 'Web Audio API', 'Recharts', 'Chess.com API', 'Web Workers'],
+    keyProjects: [
+      {
+        title: 'Chess Analyzer & Stockfish WASM Engine',
+        github: 'https://github.com/lohithjallipalli/Chess-Analyzer.git',
+        description: 'Engineered a zero-latency, private chess review suite with multi-threaded WebAssembly engine analysis and real-time visualization.',
+        tags: ['Next.js', 'Stockfish WASM', 'Chess.js', 'Recharts', 'Web Audio API'],
+        bullets: [
+          'Engineered client-side Stockfish engine evaluation using WebAssembly (WASM) web workers for high-depth analysis with zero server latency and 100% user privacy.',
+          'Implemented intelligent turn-by-turn move classification (Best, Inaccuracy, Mistake, Blunder) with real-time arrow visualizers and tactical alternatives.',
+          'Constructed dynamic win probability and accuracy evaluation graphs using Recharts alongside contextual AI coach guidance for each move.',
+          'Integrated live Chess.com public API for instant player profile and match fetching, custom PGN/FEN parsing, and a zero-dependency Web Audio sound synthesizer.'
+        ]
+      }
+    ]
+  },
+  {
     title: 'LeaveFlow - ServiceNow',
     role: 'SERVICENOW APPLICATION & PORTAL',
     duration: '1 month',

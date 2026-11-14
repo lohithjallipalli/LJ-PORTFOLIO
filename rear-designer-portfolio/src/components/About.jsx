@@ -41,7 +41,7 @@ export default function About() {
                 <Rocket size={16} />
               </div>
               <div className="profile-stat-details">
-                <span className="profile-stat-number">3+</span>
+                <span className="profile-stat-number">4+</span>
                 <span className="profile-stat-label">Projects</span>
               </div>
             </div>
