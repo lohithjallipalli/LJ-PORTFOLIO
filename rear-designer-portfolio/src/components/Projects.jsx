@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Calendar, MapPin, ArrowUpRight, ExternalLink, X } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, ArrowUpRight, ExternalLink, X, FolderGit2 } from 'lucide-react';
 import CustomIcon from './CustomIcon';
 import { projectsData } from '../data/portfolioData';
 
@@ -17,6 +17,22 @@ export default function Projects() {
             Explore my latest work, blending creativity and code for functional,
             responsive applications with clean design and seamless user experiences.
           </p>
+
+          {/* Small Total Projects Count Card */}
+          <div className="projects-count-card">
+            <div className="projects-count-icon-wrapper">
+              <FolderGit2 size={16} />
+            </div>
+            <div className="projects-count-content">
+              <div className="projects-count-value-row">
+                <span className="projects-count-number">
+                  {projectsData.length < 10 ? `0${projectsData.length}` : projectsData.length}
+                </span>
+                <span className="projects-count-indicator" title="Active & Deployed"></span>
+              </div>
+              <span className="projects-count-label">Total Projects</span>
+            </div>
+          </div>
         </div>
         <div className="projects-grid">
           {projectsData.map((project, index) => (
