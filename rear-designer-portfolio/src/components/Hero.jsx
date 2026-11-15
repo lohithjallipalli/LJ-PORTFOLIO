@@ -78,7 +78,7 @@ export default function Hero() {
             {/* Point Start */}
             <div className="point">
               <div className="flex">
-                <Odometer value={4} />
+                <Odometer value={5} />
                 <h3 className="sub__title">+</h3>
               </div>
               <p className="text__muted">Realtime projects delivered</p>
@@ -88,7 +88,7 @@ export default function Hero() {
             {/* Point Start */}
             <div className="point">
               <div className="flex">
-                <Odometer value={5} />
+                <Odometer value={6} />
                 <h3 className="sub__title">+</h3>
               </div>
               <p className="text__muted">Active GitHub repos</p>
