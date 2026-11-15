@@ -119,28 +119,28 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    title: 'Sudoku-Assist',
-    role: 'REAL-TIME CANDIDATE VISUALIZER & CHROME EXTENSION',
+    title: 'LeaveFlow - ServiceNow',
+    role: 'SERVICENOW APPLICATION & PORTAL',
     duration: '1 month',
-    type: 'Personal Project',
+    type: 'Scoped Application',
     location: 'Remote',
-    tags: ['React', 'Vite', 'HTML5 Canvas', 'Tesseract.js OCR', 'Chrome Extension MV3', 'Algorithms'],
-    link: 'https://github.com/lohithjallipalli/Sudoku-Assist.git',
-    liveLink: 'https://sudoku-assist.vercel.app/',
-    description: 'A dual-target Sudoku assistant and solver featuring automated screenshot OCR, real-time candidate visualization, naked singles detection, and a universal Chrome extension overlay.',
-    longDescription: 'Developed Sudoku-Assist, a high-performance candidate computation engine, web application, and universal Chrome Extension (Manifest V3) built with React 18, Vite, and HTML5 Canvas. It eliminates tedious manual pencil tracking by dynamically calculating candidates for every cell, highlighting naked singles, validating conflicts, solving complex puzzles using backtracking with MRV heuristics, and extracting boards from screenshots using Tesseract.js OCR.',
-    skills: ['React 18', 'Vite 6', 'HTML5 Canvas', 'Tesseract.js (OCR)', 'Chrome Extension (Manifest V3)', 'Vitest', 'Backtracking / MRV', 'REST APIs'],
+    tags: ['ServiceNow', 'Next Experience', 'Business Rules', 'WorkFlow Studio', 'GlideAPI\'s', 'Script Includes', 'REST API'],
+    link: 'https://github.com/lohithjallipalli/LeaveFlow-ServiceNow',
+    liveLink: null,
+    description: 'Developed LeaveFlow, an enterprise-grade leave management portal and scoped application on ServiceNow (Brazil release) with self-service, approval automation, and team calendars.',
+    longDescription: 'Developed LeaveFlow, a smart leave management portal and scoped application built on ServiceNow (Brazil PDI). Utilizing ServiceNow Next Experience  and Flow Designer, it streamlines time-off submissions, manager approvals, real-time balance tracking, and team availability calendars while replacing manual spreadsheets and email threads.',
+    skills: ['ServiceNow (Brazil PDI)', 'Next Experience ', 'Script Includes', 'GlideScript & Business Rules', 'ACL Security & RBAC', 'REST API Integration', 'Data Resources'],
     keyProjects: [
       {
-        title: 'Sudoku-Assist Engine & Chrome Extension',
-        github: 'https://github.com/lohithjallipalli/Sudoku-Assist.git',
-        description: 'Engineered candidate calculation math engine, high-performance HTML5 canvas visualizer, and universal floating Chrome extension.',
-        tags: ['React', 'HTML5 Canvas', 'Chrome Extension MV3', 'Tesseract.js', 'Vitest'],
+        title: 'LeaveFlow Portal & Approval Automation',
+        github: 'https://github.com/lohithjallipalli/LeaveFlow-ServiceNow',
+        description: 'Engineered a modern ServiceNow scoped application featuring role-based dashboards, automated approval workflows, and external holiday API integration.',
+        tags: ['ServiceNow', 'UI Builder', 'GlideRecord', 'Nager.Date API', 'ACLs'],
         bullets: [
-          'Engineered a decoupled candidate calculation engine and backtracking auto-solver using Minimum Remaining Values (MRV) heuristics with comprehensive Vitest coverage.',
-          'Integrated automated screenshot OCR via Tesseract.js with adaptive image processing to extract both standard 9×9 and mini 6×6 puzzle grids from user uploads.',
-          'Constructed a high-DPI HTML5 canvas visualizer featuring real-time pencil-mark sub-grids, naked singles highlighting, conflict validation, and PNG export.',
-          'Developed a draggable floating Manifest V3 Chrome Extension that injects into live platforms (Sudoku.com, WebSudoku, NYTimes) for active candidate calculation and 1-click digit insertion.'
+          'Engineered an intuitive Next Experience Forms with employee self-service forms, real-time KPI balance types (Annual, Sick, Casual, Comp), and manager approval queues.',
+          'Built custom Script Includes (ManagerLeaveActions, LeaveRequestUtils) and Business Rules for live date validation, automatic duration calculations, and overlap checking.',
+          'Configured enterprise Role-Based Access Control (RBAC) and ACL containment hierarchy (Admin > Manager > Employee) alongside query business rules to guarantee strict data segregation.',
+          'Integrated Nager.Date external REST API for real-time upcoming public holiday synchronization and built CSV export utilities for user leave histories.'
         ]
       }
     ]
@@ -173,28 +173,26 @@ export const projectsData = [
     ]
   },
   {
-    title: 'LeaveFlow - ServiceNow',
-    role: 'SERVICENOW APPLICATION & PORTAL',
+    title: 'Lohith Portfolio',
+    role: 'ANIMATED DESIGNER PORTFOLIO',
     duration: '1 month',
-    type: 'Scoped Application',
+    type: 'Personal Project',
     location: 'Remote',
-    tags: ['ServiceNow', 'Next Experience', 'Business Rules', 'WorkFlow Studio', 'GlideAPI\'s', 'Script Includes', 'REST API'],
-    link: 'https://github.com/lohithjallipalli/LeaveFlow-ServiceNow',
-    liveLink: null,
-    description: 'Developed LeaveFlow, an enterprise-grade leave management portal and scoped application on ServiceNow (Brazil release) with self-service, approval automation, and team calendars.',
-    longDescription: 'Developed LeaveFlow, a smart leave management portal and scoped application built on ServiceNow (Brazil PDI). Utilizing ServiceNow Next Experience  and Flow Designer, it streamlines time-off submissions, manager approvals, real-time balance tracking, and team availability calendars while replacing manual spreadsheets and email threads.',
-    skills: ['ServiceNow (Brazil PDI)', 'Next Experience ', 'Script Includes', 'GlideScript & Business Rules', 'ACL Security & RBAC', 'REST API Integration', 'Data Resources'],
+    tags: ['React', 'GSAP', 'Vite', 'CSS', 'Lucide Icons'],
+    link: '#',
+    description: 'A premium, high-fidelity personal portfolio showcasing modern animations, custom themes, and interactive skill catalogs.',
+    longDescription: 'A high-fidelity animated developer portfolio built to display technical projects, interactive skill grids, and education timelines using sleek glassmorphic themes.',
+    skills: ['React.js', 'GSAP', 'Vite', 'CSS3', 'Lucide Icons', 'ScrollTrigger', 'Swiper'],
     keyProjects: [
       {
-        title: 'LeaveFlow Portal & Approval Automation',
-        github: 'https://github.com/lohithjallipalli/LeaveFlow-ServiceNow',
-        description: 'Engineered a modern ServiceNow scoped application featuring role-based dashboards, automated approval workflows, and external holiday API integration.',
-        tags: ['ServiceNow', 'UI Builder', 'GlideRecord', 'Nager.Date API', 'ACLs'],
+        title: 'Motion & Interaction Engine',
+        github: '#',
+        description: 'Integrated GSAP and ScrollTrigger to drive staggered page transitions, theme shifting animations, and interactive timelines.',
+        tags: ['GSAP', 'React.js', 'CSS3'],
         bullets: [
-          'Engineered an intuitive Next Experience Forms with employee self-service forms, real-time KPI balance types (Annual, Sick, Casual, Comp), and manager approval queues.',
-          'Built custom Script Includes (ManagerLeaveActions, LeaveRequestUtils) and Business Rules for live date validation, automatic duration calculations, and overlap checking.',
-          'Configured enterprise Role-Based Access Control (RBAC) and ACL containment hierarchy (Admin > Manager > Employee) alongside query business rules to guarantee strict data segregation.',
-          'Integrated Nager.Date external REST API for real-time upcoming public holiday synchronization and built CSV export utilities for user leave histories.'
+          'Configured scroll snapping with smooth viewport transitions.',
+          'Designed customizable accent color picker that updates CSS variables in real time.',
+          'Optimized mobile navigation drawer using React layout states.'
         ]
       }
     ]
@@ -226,26 +224,28 @@ export const projectsData = [
     ]
   },
   {
-    title: 'Lohith Portfolio',
-    role: 'ANIMATED DESIGNER PORTFOLIO',
+    title: 'Sudoku-Assist',
+    role: 'REAL-TIME CANDIDATE VISUALIZER & CHROME EXTENSION',
     duration: '1 month',
     type: 'Personal Project',
     location: 'Remote',
-    tags: ['React', 'GSAP', 'Vite', 'CSS', 'Lucide Icons'],
-    link: '#',
-    description: 'A premium, high-fidelity personal portfolio showcasing modern animations, custom themes, and interactive skill catalogs.',
-    longDescription: 'A high-fidelity animated developer portfolio built to display technical projects, interactive skill grids, and education timelines using sleek glassmorphic themes.',
-    skills: ['React.js', 'GSAP', 'Vite', 'CSS3', 'Lucide Icons', 'ScrollTrigger', 'Swiper'],
+    tags: ['React', 'Vite', 'HTML5 Canvas', 'Tesseract.js OCR', 'Chrome Extension MV3', 'Algorithms'],
+    link: 'https://github.com/lohithjallipalli/Sudoku-Assist.git',
+    liveLink: 'https://sudoku-assist.vercel.app/',
+    description: 'A dual-target Sudoku assistant and solver featuring automated screenshot OCR, real-time candidate visualization, naked singles detection, and a universal Chrome extension overlay.',
+    longDescription: 'Developed Sudoku-Assist, a high-performance candidate computation engine, web application, and universal Chrome Extension (Manifest V3) built with React 18, Vite, and HTML5 Canvas. It eliminates tedious manual pencil tracking by dynamically calculating candidates for every cell, highlighting naked singles, validating conflicts, solving complex puzzles using backtracking with MRV heuristics, and extracting boards from screenshots using Tesseract.js OCR.',
+    skills: ['React 18', 'Vite 6', 'HTML5 Canvas', 'Tesseract.js (OCR)', 'Chrome Extension (Manifest V3)', 'Vitest', 'Backtracking / MRV', 'REST APIs'],
     keyProjects: [
       {
-        title: 'Motion & Interaction Engine',
-        github: '#',
-        description: 'Integrated GSAP and ScrollTrigger to drive staggered page transitions, theme shifting animations, and interactive timelines.',
-        tags: ['GSAP', 'React.js', 'CSS3'],
+        title: 'Sudoku-Assist Engine & Chrome Extension',
+        github: 'https://github.com/lohithjallipalli/Sudoku-Assist.git',
+        description: 'Engineered candidate calculation math engine, high-performance HTML5 canvas visualizer, and universal floating Chrome extension.',
+        tags: ['React', 'HTML5 Canvas', 'Chrome Extension MV3', 'Tesseract.js', 'Vitest'],
         bullets: [
-          'Configured scroll snapping with smooth viewport transitions.',
-          'Designed customizable accent color picker that updates CSS variables in real time.',
-          'Optimized mobile navigation drawer using React layout states.'
+          'Engineered a decoupled candidate calculation engine and backtracking auto-solver using Minimum Remaining Values (MRV) heuristics with comprehensive Vitest coverage.',
+          'Integrated automated screenshot OCR via Tesseract.js with adaptive image processing to extract both standard 9×9 and mini 6×6 puzzle grids from user uploads.',
+          'Constructed a high-DPI HTML5 canvas visualizer featuring real-time pencil-mark sub-grids, naked singles highlighting, conflict validation, and PNG export.',
+          'Developed a draggable floating Manifest V3 Chrome Extension that injects into live platforms (Sudoku.com, WebSudoku, NYTimes) for active candidate calculation and 1-click digit insertion.'
         ]
       }
     ]
