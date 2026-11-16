@@ -307,12 +307,102 @@ export const tabData = {
   ],
   Certificates: [
     {
-      title: 'Servicenow Trainee ',
+      title: 'Micro-Certification - UI Builder',
+      date: 'November 2026',
+      subtitle: 'ServiceNow',
+      link: '/assets/certificates/servicenow-ui-builder.pdf',
+      bullets: [
+        'Certified in designing and building Next Experience workspace applications, custom portal pages, and components using ServiceNow UI Builder.',
+      ],
+    },
+    {
+      title: 'Micro-Certification - Platform Analytics',
+      date: 'November 2026',
+      subtitle: 'ServiceNow',
+      link: '/assets/certificates/servicenow-platform-analytics.pdf',
+      bullets: [
+        'Demonstrated expertise in configuring Platform Analytics dashboards, KPI indicators, data visualizations, and reporting widgets.',
+      ],
+    },
+    {
+      title: 'Micro-Certification - Integration Hub',
+      date: 'November 2026',
+      subtitle: 'ServiceNow',
+      link: '/assets/certificates/servicenow-integrationhub.pdf',
+      bullets: [
+        'Certified in automating multi-system workflows and enterprise integrations using Integration Hub spokes and REST APIs.',
+      ],
+    },
+    {
+      title: 'SQL (Intermediate)',
       date: 'October 2026',
-      subtitle: 'Servicenow Training At SSSSO',
+      subtitle: 'HackerRank',
+      link: '/assets/certificates/hackerrank-sql-intermediate.pdf',
+      bullets: [
+        'Passed HackerRank skill certification test covering complex SQL queries, multi-table joins, subqueries, aggregations, and data indexing (ID: 03AFD3965AA2).',
+      ],
+    },
+    {
+      title: 'Micro-Certification - Flows',
+      date: 'October 2026',
+      subtitle: 'ServiceNow',
+      link: '/assets/certificates/servicenow-flows.pdf',
+      bullets: [
+        'Validated hands-on expertise in creating, testing, and managing automated business processes and subflows using Flow Designer.',
+      ],
+    },
+    {
+      title: 'ServiceNow Trainee',
+      date: 'October 2026',
+      subtitle: 'Sri Sathya Sai Skill Development Center, BHEL Samithi',
       link: '/assets/SSSSO.png',
       bullets: [
-        'Successfully completed a 45-Day (165-hour) ServiceNow Training( Administration, Scripting,ITSM - Fundamentals) - RPL 2026 at Sri Sathya Sai Skill Development Center,',
+        'Successfully completed a 45-Day (165-hour) ServiceNow Training (Administration, Scripting, ITSM - Fundamentals) - RPL 2026 at Sri Sathya Sai Skill Development Center.',
+      ],
+    },
+    {
+      title: 'Micro-Certification - Welcome to ServiceNow',
+      date: 'September 2026',
+      subtitle: 'ServiceNow',
+      link: '/assets/certificates/servicenow-welcome.pdf',
+      bullets: [
+        'Completed official certification on foundational platform capabilities, user administration, table structures, and IT service management principles.',
+      ],
+    },
+    {
+      title: 'Introduction to Kali Linux Basics',
+      date: 'July 2026',
+      subtitle: 'Simplilearn SkillUp',
+      link: '/assets/certificates/simplilearn-kali-linux.pdf',
+      bullets: [
+        'Completed foundational certification covering Linux architecture, terminal commands, directory management, and security tools (Code: 10497560).',
+      ],
+    },
+    {
+      title: 'Linux Unhatched',
+      date: 'July 2026',
+      subtitle: 'Cisco Networking Academy & NDG',
+      link: '/assets/certificates/cisco-linux-unhatched.pdf',
+      bullets: [
+        'Completed Cisco Networking Academy training covering Linux OS navigation, file permissions, and CLI administration (Cert ID: 06eb9172-f68e-4be5-a042-8918076beb7e).',
+      ],
+    },
+    {
+      title: 'Technology Job Simulation',
+      date: 'May 2026',
+      subtitle: 'Deloitte (via Forage)',
+      link: '/assets/certificates/deloitte-tech-simulation.pdf',
+      bullets: [
+        'Completed practical tasks in coding, software development, and enterprise technical requirements (Verification: ZjaAzoZfcMCQJBqzm).',
+      ],
+    },
+    {
+      title: 'Duolingo English Test',
+      date: 'October 2025',
+      subtitle: 'Duolingo',
+      link: '/assets/DET.pdf',
+      bullets: [
+        'Scored 130/160, achieving Advanced CEFR C1 level proficiency (Certificate ID: nkf9pje6f7gwyprf).',
       ],
     },
     {
@@ -321,16 +411,7 @@ export const tabData = {
       subtitle: 'EY Global Delivery Services & AICTE',
       link: 'https://drive.google.com/file/d/1Q05bhkqarke3SqNj4VxHuEL1s7Kbm7MC/view?usp=sharing',
       bullets: [
-        'Earned certification for completing training in full-stack MERN (MongoDB, Express.js, React, Node.js) development.',
-      ],
-    },
-    {
-      title: 'Duolingo English Test ',
-      date: 'October 2025',
-      subtitle: 'Duolingo',
-      link: '/assets/DET.pdf',
-      bullets: [
-        'Scored 130/160, achieving Advanced CEFR C1 level proficiency.',
+        'Earned certification for completing training in full-stack MERN (MongoDB, Express.js, React, Node.js) development under Next Gen Employability Program.',
       ],
     },
   ],
