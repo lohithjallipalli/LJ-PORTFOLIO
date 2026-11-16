@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -10,7 +10,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Journey from './components/Journey';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeSelector from './components/ThemeSelector';
@@ -46,10 +46,8 @@ function App() {
   const [activeSection, setActiveSection] = useState('header');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
-  const [visitorPurpose, setVisitorPurpose] = useState(null);
 
-  const handleIntroComplete = (purpose) => {
-    setVisitorPurpose(purpose);
+  const handleIntroComplete = () => {
     setShowIntro(false);
   };
 
@@ -152,15 +150,15 @@ function App() {
         { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }
       );
 
-      // Journey Scroll Animation (Only header elements to prevent ScrollTrigger visibility bugs on grid cards)
-      const tlJourney = gsap.timeline({
+      // Certifications Scroll Animation
+      const tlCertifications = gsap.timeline({
         scrollTrigger: {
-          trigger: '#journey',
+          trigger: '#certifications',
           start: 'top 85%',
         },
       });
-      tlJourney.from(
-        ['#journey .section__header .sub__title', '#journey .section__header .description'],
+      tlCertifications.from(
+        ['#certifications .section__header .sub__title', '#certifications .section__header .description'],
         { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }
       );
 
@@ -203,7 +201,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Journey />
+      <Certifications />
       <Contact />
       <Footer />
       <ThemeSelector

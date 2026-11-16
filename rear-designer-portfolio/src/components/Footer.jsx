@@ -63,8 +63,8 @@ export default function Footer() {
             <div className="footer-links-list">
               <a href="#about" className="footer-link-item">EXPERIENCE</a>
               <a href="#projects" className="footer-link-item">PROJECTS</a>
-              <a href="#about" className="footer-link-item">CERTIFICATIONS</a>
-              <a href="#journey" className="footer-link-item">CODING JOURNEY</a>
+              <a href="#certifications" className="footer-link-item">CERTIFICATIONS</a>
+              <a href="#about" className="footer-link-item">CODING JOURNEY</a>
             </div>
           </div>
 

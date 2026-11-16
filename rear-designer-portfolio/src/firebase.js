@@ -15,12 +15,11 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
-let app = null;
 let db = null;
 
 if (firebaseConfig.apiKey) {
   try {
-    app = initializeApp(firebaseConfig);
+    const app = initializeApp(firebaseConfig);
     db = getDatabase(app);
   } catch (err) {
     console.warn("Firebase initialization skipped:", err);

@@ -1,10 +1,16 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { db } from '../firebase';
 import { ref, onValue, runTransaction } from 'firebase/database';
 
 function VisitorCounter() {
   const [count, setCount] = useState(() => {
-    // Persistent local count so user always sees the counter
+    // If Firebase isn't configured, increment a persistent local visit counter
+    const isConfigured = Boolean(db && db.app && db.app.options && db.app.options.apiKey && !db.app.options.apiKey.includes('YOUR_'));
+    if (!isConfigured) {
+      const current = parseInt(localStorage.getItem('visitor_local_count') || '48', 10) + 1;
+      localStorage.setItem('visitor_local_count', current.toString());
+      return current;
+    }
     const stored = localStorage.getItem('visitor_local_count');
     return stored ? parseInt(stored, 10) : 48;
   });
@@ -12,13 +18,8 @@ function VisitorCounter() {
   const prevCountRef = useRef(null);
 
   useEffect(() => {
-    // If Firebase isn't configured, increment a persistent local visit counter
     const isConfigured = Boolean(db && db.app && db.app.options && db.app.options.apiKey && !db.app.options.apiKey.includes('YOUR_'));
-
     if (!isConfigured) {
-      const current = parseInt(localStorage.getItem('visitor_local_count') || '48', 10) + 1;
-      localStorage.setItem('visitor_local_count', current);
-      setCount(current);
       return;
     }
 
@@ -31,7 +32,7 @@ function VisitorCounter() {
         sessionStorage.setItem(sessionKey, 'true');
         runTransaction(visitorRef, (currentCount) => {
           return (currentCount || 0) + 1;
-        }).catch(() => { });
+        }).catch(() => {});
       }
 
       const unsubscribe = onValue(
@@ -47,11 +48,13 @@ function VisitorCounter() {
             prevCountRef.current = val;
           }
         },
-        () => { }
+        () => {}
       );
 
       return () => unsubscribe();
-    } catch { }
+    } catch {
+      // Ignore firebase connection errors
+    }
   }, []);
 
   return (

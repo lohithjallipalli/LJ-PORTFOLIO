@@ -1080,6 +1080,75 @@ p {
   margin: 0;
 }
 
+/* About Journey Metrics Box beside What Drives Me */
+.about-journey-metrics-box {
+  height: 210px;
+  padding: 14px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-journey-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-metric-card {
+  background: rgba(var(--bg-base-rgb), 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-2);
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] .about-metric-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.about-metric-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  background: rgba(var(--bg-base-rgb), 0.6);
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.about-metric-icon {
+  color: var(--color-primary);
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+
+.about-metric-card:hover .about-metric-icon {
+  transform: scale(1.1);
+}
+
+.about-metric-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.about-metric-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
 #about .box {
   background: var(--bg-secondary);
   border-radius: var(--radius-3);
@@ -1396,65 +1465,13 @@ p {
 }
 /* ============== PROJECTS END ========= */
 
-/* ============ JOURNEY START ======== */
-#journey {
+/* ============ CERTIFICATIONS START ======== */
+#certifications {
   overflow: hidden;
   position: relative;
-  padding: 50px 0;
-  background: rgba(var(--bg-secondary-rgb), 0.8);
+  padding: 80px 0;
 }
-#journey .sub__title {
-  text-align: center;
-}
-#journey .flex {
-  align-items: center;
-  gap: 10px;
-}
-#journey .user {
-  margin-bottom: 30px;
-}
-#journey .name {
-  font-size: 16px;
-  font-weight: 500;
-}
-#journey .content {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-#journey .stars__container {
-  justify-content: flex-start;
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-}
-/* Responsive code */
-@media only screen and (max-width: 767px) {
-  #journey .testimonial {
-    padding: 20px;
-  }
-  #journey .testimonial p {
-    font-size: 12px;
-  }
-  #journey .stars__container {
-    bottom: 20px;
-    left: 20px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #journey {
-    padding: 50px 20px;
-  }
-  #journey .testimonial {
-    max-width: 100%;
-  }
-  #journey .testimonial .row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    text-align: left;
-  }
-}
-/* ============ JOURNEY END ======== */
+/* ============ CERTIFICATIONS END ======== */
 
 /* ============ CONTACT START ============ */
 #contact > .container {
@@ -2086,7 +2103,7 @@ p {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -2096,11 +2113,11 @@ p {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: var(--gray-border);
-  border-radius: var(--radius-3);
-  padding: 24px;
+  border-radius: var(--radius-2);
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 16px;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2149,8 +2166,8 @@ p {
 }
 
 .skill-icon-container {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
@@ -2159,6 +2176,11 @@ p {
   color: var(--text-color);
   background: rgba(var(--bg-base-rgb), 0.2);
   transition: all 0.3s ease;
+}
+
+.skill-icon-container svg {
+  width: 17px;
+  height: 17px;
 }
 
 [data-theme="light"] .skill-icon-container {
@@ -2173,9 +2195,9 @@ p {
 }
 
 .skill-level-badge {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 100px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -2221,14 +2243,14 @@ p {
 }
 
 .skill-name {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text-color);
   letter-spacing: -0.01em;
 }
 
 .skill-category {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--color-muted);
   text-transform: uppercase;
@@ -2296,7 +2318,7 @@ p {
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 14px;
   }
 }
 
@@ -2316,7 +2338,7 @@ p {
 
   .skills-grid {
     grid-template-columns: 100%;
-    gap: 16px;
+    gap: 12px;
   }
 }
 /* ============= SKILLS SECTION END ============ */
@@ -2659,10 +2681,10 @@ p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .project-card {
@@ -2670,11 +2692,11 @@ p {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: var(--gray-border);
-  border-radius: var(--radius-3);
-  padding: 35px;
+  border-radius: var(--radius-2);
+  padding: 22px 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2717,8 +2739,8 @@ p {
 }
 
 .project-icon-wrapper {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 8px;
   background: rgba(var(--bg-base-rgb), 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2743,18 +2765,18 @@ p {
 .project-card-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .project-title {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--text-color);
   letter-spacing: -0.02em;
 }
 
 .project-role {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--color-primary-light);
   text-transform: uppercase;
@@ -2763,7 +2785,7 @@ p {
 
 .project-meta {
   display: flex;
-  gap: 20px;
+  gap: 14px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -2771,8 +2793,8 @@ p {
 .project-meta-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 6px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-color);
   opacity: 0.8;
@@ -2786,11 +2808,11 @@ p {
 .project-skills-section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .project-skills-title {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
   color: var(--text-color);
   letter-spacing: 0.08em;
@@ -2800,15 +2822,15 @@ p {
 
 .project-tags {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .project-tag {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 6px 14px;
+  padding: 4px 10px;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--text-color);
@@ -2829,13 +2851,13 @@ p {
 
 .project-view-btn {
   width: 100%;
-  padding: 14px;
+  padding: 10px 14px;
   border-radius: var(--radius-2);
   border: 1px solid rgba(255, 255, 255, 0.25);
   background: transparent;
   color: var(--text-color);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
@@ -2875,13 +2897,13 @@ p {
 
 .project-live-btn {
   flex: 1;
-  padding: 14px;
+  padding: 10px 14px;
   border-radius: var(--radius-2);
   border: 1px solid rgba(0, 199, 177, 0.35);
   background: rgba(0, 199, 177, 0.06);
   color: #00c7b1;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
@@ -2909,11 +2931,11 @@ p {
 @media only screen and (max-width: 900px) {
   .projects-grid {
     grid-template-columns: 100%;
-    gap: 24px;
+    gap: 18px;
   }
   
   .project-card {
-    padding: 24px;
+    padding: 20px;
   }
 }
 /* ============= PROJECTS SECTION END ============ */
@@ -3207,267 +3229,334 @@ p {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.coding-journey-metrics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  width: 100%;
-}
-
-.metric-card {
-  background: rgba(var(--bg-secondary-rgb), 0.45);
-  border: var(--gray-border);
-  border-radius: var(--radius-3);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+/* ============= CERTIFICATIONS SECTION START ============ */
+#certifications .section__header {
   text-align: center;
-  transition: all 0.3s ease;
+  max-width: 650px;
+  margin: 0 auto 35px auto;
 }
 
-.metric-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-primary) 10%, transparent);
-}
-
-.metric-icon {
-  color: var(--color-primary-light);
-}
-
-.metric-value {
-  font-size: 26px;
-  font-weight: 800;
+.cert-count-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
   color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
-.metric-label {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--color-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.coding-journey-dashboard {
-  display: flex;
-  gap: 30px;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.coding-journey-tabs-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 240px;
-  min-width: 240px;
-}
-
-.journey-tab-btn {
+/* Category Filter Tabs */
+.cert-filter-tabs {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.cert-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
   border-radius: var(--radius-2);
-  background: rgba(var(--bg-secondary-rgb), 0.3);
-  border: var(--gray-border);
-  color: var(--color-muted);
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-}
-
-.journey-tab-btn:hover {
-  color: var(--text-color);
-  border-color: var(--color-primary-light);
   background: rgba(var(--bg-secondary-rgb), 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.journey-tab-btn.active {
-  background: var(--gradient-1);
-  color: var(--color-white) !important;
-  border-color: transparent;
-  box-shadow: 0 4px 15px color-mix(in srgb, var(--color-primary) 20%, transparent);
+[data-theme="light"] .cert-filter-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
-.coding-journey-details-panel {
-  flex: 1;
+.cert-filter-btn:hover {
+  color: var(--text-color);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
-.journey-details-card {
-  background: rgba(var(--bg-secondary-rgb), 0.45);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: var(--gray-border);
-  border-radius: var(--radius-3);
-  padding: 35px;
+.cert-filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+
+.cert-filter-count {
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.cert-filter-btn.active .cert-filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* Certifications Mini Cards Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+.cert-mini-card {
+  background: rgba(var(--bg-secondary-rgb), 0.5);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-2);
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--border-shadow);
 }
 
-.journey-details-header {
+[data-theme="light"] .cert-mini-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.cert-mini-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 8%, transparent) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.cert-mini-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.cert-mini-card:hover::before {
+  opacity: 1;
+}
+
+.cert-card-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.journey-profile-block {
+.cert-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2.5px 7px;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  color: var(--color-primary);
+}
+
+.cert-badge.servicenow {
+  background: rgba(0, 199, 177, 0.12);
+  border-color: rgba(0, 199, 177, 0.3);
+  color: #00c7b1;
+}
+
+.cert-badge.development {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+}
+
+.cert-badge.ai---data {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.3);
+  color: #c084fc;
+}
+
+.cert-badge.devops---linux {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+.cert-badge.languages {
+  background: rgba(236, 72, 153, 0.12);
+  border-color: rgba(236, 72, 153, 0.3);
+  color: #f472b6;
+}
+
+.cert-date {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.cert-card-body {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.journey-profile-icon-wrapper {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(var(--bg-base-rgb), 0.3);
+.cert-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cert-icon-wrap {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-primary);
+  margin-top: 2px;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-[data-theme="light"] .journey-profile-icon-wrapper {
-  border-color: rgba(0, 0, 0, 0.1);
+.cert-mini-card:hover .cert-icon-wrap {
+  transform: translateY(-1px) scale(1.05);
+  background: color-mix(in srgb, var(--color-primary) 15%, rgba(255, 255, 255, 0.05));
+  border-color: color-mix(in srgb, var(--color-primary) 50%, rgba(255, 255, 255, 0.15));
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 18%, transparent);
 }
 
-.journey-profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.cert-company-logo {
+  width: 100%;
+  height: 100%;
+  max-width: 22px;
+  max-height: 22px;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s ease;
 }
 
-.journey-profile-title {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--text-color);
-  letter-spacing: -0.01em;
+.cert-mini-card:hover .cert-company-logo {
+  transform: scale(1.08);
 }
 
-.journey-profile-username {
-  font-size: 11px;
+.cert-title {
+  font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-primary-light);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.journey-profile-link-btn {
-  padding: 10px 18px;
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
   color: var(--text-color);
+  line-height: 1.3;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.cert-mini-card:hover .cert-title {
+  color: var(--color-primary);
+}
+
+.cert-issuer {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-top: 1px;
+}
+
+.cert-one-liner {
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: var(--color-muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cert-card-footer {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .cert-card-footer {
+  border-top-color: rgba(0, 0, 0, 0.05);
+}
+
+.cert-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: var(--radius-2);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  color: var(--color-primary);
+  font-size: 0.7rem;
   font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
 }
 
-[data-theme="light"] .journey-profile-link-btn {
-  border-color: rgba(0, 0, 0, 0.2);
+.cert-view-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
-.journey-profile-link-btn:hover {
-  background: var(--gradient-1);
-  border-color: transparent;
-  color: var(--color-white);
-  box-shadow: 0 4px 15px color-mix(in srgb, var(--color-primary) 15%, transparent);
-}
-
-.coding-journey-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.journey-stat-card {
-  background: rgba(var(--bg-base-rgb), 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-3);
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.cert-verified-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  display: block;
   text-align: center;
 }
 
-[data-theme="light"] .journey-stat-card {
-  border-color: rgba(0, 0, 0, 0.08);
-  background: rgba(0, 0, 0, 0.02);
-}
-
-.journey-stat-label {
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--color-muted);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.journey-stat-value {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--text-color);
-}
-
+/* Responsive Certifications */
 @media only screen and (max-width: 900px) {
-  .coding-journey-metrics {
+  .certifications-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  
-  .coding-journey-dashboard {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .coding-journey-tabs-menu {
-    width: 100%;
-    flex-direction: row;
-  }
-  
-  .journey-tab-btn {
-    flex: 1;
-    justify-content: center;
+    gap: 12px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .coding-journey-metrics {
+  .certifications-grid {
     grid-template-columns: 100%;
-  }
-  
-  .coding-journey-tabs-menu {
-    flex-direction: column;
-  }
-  
-  .journey-details-card {
-    padding: 24px;
-    gap: 20px;
-  }
-  
-  .coding-journey-stats-grid {
-    grid-template-columns: 100%;
+    gap: 12px;
   }
 }
-/* ============= CODING JOURNEY END ============ */
+/* ============= CERTIFICATIONS SECTION END ============ */
 
 /* ============= INTRO SCREEN ============ */
 .intro__overlay {

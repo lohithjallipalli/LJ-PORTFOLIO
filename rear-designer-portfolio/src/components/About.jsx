@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Code,
   Rocket,
@@ -8,7 +8,6 @@ import {
   Download,
   GraduationCap,
   Briefcase,
-  FileCheck,
   Award,
   SquareArrowOutUpRight
 } from 'lucide-react';
@@ -91,10 +90,10 @@ export default function About() {
               <Briefcase size={14} /> Experience
             </button>
             <button
-              className={`tab-btn ${activeTab === 'Certificates' ? 'active' : ''}`}
-              onClick={() => setActiveTab('Certificates')}
+              className={`tab-btn ${activeTab === 'Journey' ? 'active' : ''}`}
+              onClick={() => setActiveTab('Journey')}
             >
-              <FileCheck size={14} /> Certificates
+              <Code size={14} /> Journey
             </button>
             <button
               className={`tab-btn ${activeTab === 'Achievements' ? 'active' : ''}`}
@@ -135,8 +134,8 @@ export default function About() {
         </div>
         {/* Box End */}
 
-        {/* Box Start */}
-        <div className="col-2 box my-drive-compact">
+        {/* Box Start: What Drives Me */}
+        <div className="box my-drive-compact">
           <div className="spotlight"></div>
           <div className="my__drive">
             <h2 className="sub__title">
@@ -144,12 +143,38 @@ export default function About() {
             </h2>
             <p className="description">
               I'm passionate about solving problems through technology 💻 and turning ideas into meaningful software solutions 🚀.
-              With a strong foundation in Data Structures & Algorithms 🧩 and a growing expertise in software development ⚙️,
-              I enjoy building applications that are efficient, scalable, and user-friendly.
-              I approach every challenge with curiosity, persistence, and a commitment to continuous improvement.
+              With a strong foundation in Data Structures & Algorithms 🧩 and full-stack development ⚙️,
+              I build scalable, user-friendly applications with curiosity and continuous improvement.
             </p>
           </div>
           <CustomIcon name="grid-wire-frame" className="kit grid__wireframe" />
+        </div>
+        {/* Box End */}
+
+        {/* Box Start: Journey Metrics beside What Drives Me */}
+        <div className="box about-journey-metrics-box">
+          <div className="about-journey-metrics-grid">
+            <div className="about-metric-card">
+              <Award size={20} className="about-metric-icon" />
+              <h3 className="about-metric-value">8.64</h3>
+              <p className="about-metric-label">GPA METRIC</p>
+            </div>
+            <div className="about-metric-card">
+              <Globe size={20} className="about-metric-icon" />
+              <h3 className="about-metric-value">10 Active</h3>
+              <p className="about-metric-label">GITHUB REPOS</p>
+            </div>
+            <div className="about-metric-card">
+              <Code size={20} className="about-metric-icon" />
+              <h3 className="about-metric-value">103</h3>
+              <p className="about-metric-label">LEETCODE SOLVED</p>
+            </div>
+            <div className="about-metric-card">
+              <Briefcase size={20} className="about-metric-icon" />
+              <h3 className="about-metric-value">1 Month</h3>
+              <p className="about-metric-label">INTERNSHIP</p>
+            </div>
+          </div>
         </div>
         {/* Box End */}
       </div>

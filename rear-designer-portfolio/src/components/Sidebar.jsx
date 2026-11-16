@@ -19,7 +19,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           <a href="#about" className="navitem">About</a>
           <a href="#skills" className="navitem">Skills</a>
           <a href="#projects" className="navitem">Projects</a>
-          <a href="#journey" className="navitem">Journey</a>
+          <a href="#certifications" className="navitem">Certifications</a>
           <a href="#contact" className="navitem">Contact</a>
         </div>
       </div>
