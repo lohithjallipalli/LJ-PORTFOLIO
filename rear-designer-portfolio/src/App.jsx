@@ -196,6 +196,7 @@ function App() {
       <Sidebar
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
+        activeSection={activeSection}
       />
       <Hero />
       <About />

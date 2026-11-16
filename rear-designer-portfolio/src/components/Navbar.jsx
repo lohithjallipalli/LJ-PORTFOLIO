@@ -4,7 +4,7 @@ import { Sun, Moon, Menu } from 'lucide-react';
 export default function Navbar({ isDropped, activeSection, darkMode, setDarkMode, setSidebarOpen }) {
   return (
     <>
-      {/* Floating Logo Badge */}
+      {/* Floating Logo Badge (Desktop only) */}
       <a href="#header" className={`floating-logo-badge ${isDropped ? 'drop' : ''}`}>
         <div className="avatar-circle">L</div>
         <span className="logo-name">Lohith</span>
@@ -12,6 +12,12 @@ export default function Navbar({ isDropped, activeSection, darkMode, setDarkMode
 
       {/* Navbar Start */}
       <nav id="navbar" className={`flex__center ${isDropped ? 'drop' : ''}`}>
+        {/* Mobile Logo Brand (Inside navbar on mobile) */}
+        <a href="#header" className="navbar__mobile-logo">
+          <div className="avatar-circle">L</div>
+          <span className="logo-name">Lohith</span>
+        </a>
+
         <div className="flex nav__routes">
           <a href="#header" className={`route ${activeSection === 'header' ? 'active' : ''}`}>
             Home
@@ -32,8 +38,8 @@ export default function Navbar({ isDropped, activeSection, darkMode, setDarkMode
             Contact
           </a>
         </div>
-        <div className="flex__center">
-          <label className="theme__toggle">
+        <div className="flex__center navbar__actions">
+          <label className="theme__toggle" title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
             <input
               type="checkbox"
               id="theme-checkbox"
@@ -45,9 +51,15 @@ export default function Navbar({ isDropped, activeSection, darkMode, setDarkMode
               <Moon className="moon" />
             </div>
           </label>
-          <div className="icon__container menu__btn" id="menu__btn" onClick={() => setSidebarOpen(true)}>
-            <Menu />
-          </div>
+          <button 
+            type="button" 
+            className="icon__container menu__btn" 
+            id="menu__btn" 
+            onClick={() => setSidebarOpen(true)}
+            aria-label="Open navigation menu"
+          >
+            <Menu size={20} />
+          </button>
         </div>
       </nav>
     </>
