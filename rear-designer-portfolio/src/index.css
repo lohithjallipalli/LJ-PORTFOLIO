@@ -732,6 +732,15 @@ p {
   margin: 15px 0 25px 0 !important;
 }
 
+.hero-designation {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.01em;
+  margin-top: 6px;
+}
+
 .theme-gradient-text {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   -webkit-background-clip: text;

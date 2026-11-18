@@ -19,14 +19,10 @@ export default function Hero() {
             </div>
             <h1 className="title hero-title">
               I'm <span className="theme-gradient-text">Lohith Jallipalli</span><br />
-              Software Developer
+              <span className="hero-designation">ServiceNow Administrator</span>
             </h1>
             <p className="description">
-              Aspiring Software Developer and recent B.Tech graduate with proficiency in Data Structures and Algorithms and
-              a strong interest in designing efficient, user-focused applications. Actively developing my expertise in
-              software development, problem-solving and system design while working toward building scalable and
-              impactful solutions. Committed to continuous learning and excited to contribute to
-              innovative development teams.
+              Aspiring ServiceNow Administrator and recent B.Tech graduate with hands-on expertise in platform configuration, ITSM workflows, and process automation. Proficient in managing Users, Groups, Roles, ACLs, UI Policies, Flow Designer, and custom scripting via Business Rules and Client Scripts. Passionate about streamlining enterprise operations, maintaining system integrity, and delivering scalable, user-centric service management solutions.
             </p>
             <div className="flex buttons">
               <div className="flex social__handles">
