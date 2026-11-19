@@ -880,15 +880,15 @@ p {
 
 #header .container {
   min-height: auto;
-  padding-top: 65px;
-  padding-bottom: 20px;
+  padding-top: 75px;
+  padding-bottom: 35px;
   overflow: visible;
 }
 
 #header .grid {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) 1fr;
-  gap: 30px;
+  grid-template-columns: minmax(340px, 420px) 1fr;
+  gap: 45px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -899,30 +899,30 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   overflow: visible;
 }
 
 #header .me img {
   width: 100%;
   height: auto;
-  max-height: 330px;
+  max-height: 390px;
   object-fit: contain;
-  transform: scale(1.02);
-  transform-origin: bottom center;
+  transform: scale(1.04);
+  transform-origin: center center;
   filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
 }
 
 #header .description {
-  font-size: 15px;
-  line-height: 23px;
-  max-width: 650px;
+  font-size: 17.5px;
+  line-height: 28px;
+  max-width: 720px;
 }
 
 #header .buttons {
   align-items: center;
-  gap: 15px;
-  margin: 20px 0 0;
+  gap: 20px;
+  margin: 28px 0 0;
   flex-wrap: wrap;
 }
 
@@ -986,17 +986,17 @@ p {
   position: relative;
   width: 100%;
   max-width: 1100px;
-  margin: 15px auto 0;
+  margin: 35px auto 0;
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  gap: 1.6rem;
   background: rgba(var(--bg-secondary-rgb), 0.7);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   border: var(--gray-border);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), var(--border-shadow);
-  padding: 1.1rem 1.6rem;
+  padding: 1.5rem 2.2rem;
   border-radius: var(--radius-3);
   transition: all 0.3s ease;
 }
@@ -1016,7 +1016,7 @@ p {
 @media only screen and (min-width: 901px) {
   #header .point:not(:last-child) {
     border-right: 1.5px solid rgba(255, 255, 255, 0.2);
-    padding-right: 1.2rem;
+    padding-right: 1.6rem;
   }
 
   [data-theme="light"] #header .point:not(:last-child) {
@@ -1027,20 +1027,20 @@ p {
 #header .point .flex {
   align-items: baseline;
   gap: 4px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 #header .point .odometer,
 #header .point .sub__title {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
   color: var(--text-color);
   line-height: 1;
   margin: 0;
 }
 
 #header .point .text__muted {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 500;
   color: var(--color-muted);
 }
