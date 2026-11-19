@@ -16,9 +16,9 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           {projectsData.map((project, index) => (
-            <div 
-              key={index} 
-              className="project-card" 
+            <div
+              key={index}
+              className="project-card"
               onClick={() => setSelectedProjectDetails(project)}
               style={{ cursor: 'pointer' }}
             >
@@ -27,7 +27,7 @@ export default function Projects() {
                   <Briefcase size={20} />
                 </div>
               </div>
-              
+
               <div className="project-card-info">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-role">{project.role}</p>
@@ -52,7 +52,7 @@ export default function Projects() {
               </div>
 
               <div className="project-card-actions">
-                <button 
+                <button
                   className="project-view-btn"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -143,7 +143,7 @@ export default function Projects() {
               </p>
 
               {/* Render bullet highlights directly in the main modal body */}
-              {selectedProjectDetails.keyProjects && selectedProjectDetails.keyProjects.length > 0 && 
+              {selectedProjectDetails.keyProjects && selectedProjectDetails.keyProjects.length > 0 &&
                 selectedProjectDetails.keyProjects[0].bullets && selectedProjectDetails.keyProjects[0].bullets.length > 0 && (
                   <ul className="project-modal-bullets">
                     {selectedProjectDetails.keyProjects[0].bullets.map((bullet, bIdx) => (
@@ -152,7 +152,7 @@ export default function Projects() {
                       </li>
                     ))}
                   </ul>
-              )}
+                )}
 
               <div className="project-modal-skills-section">
                 <h4 className="project-modal-section-title">SKILLS & TECHNOLOGIES</h4>
