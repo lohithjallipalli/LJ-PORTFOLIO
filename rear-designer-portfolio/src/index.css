@@ -880,19 +880,19 @@ p {
 
 #header .container {
   min-height: auto;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 85px;
+  padding-bottom: 25px;
   overflow: visible;
 }
 
 #header .grid {
   display: grid;
-  grid-template-columns: 460px auto;
-  gap: 40px;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: 35px;
   align-items: center;
   position: relative;
   z-index: 1;
-  padding-bottom: 140px;
+  padding-bottom: 10px;
 }
 
 #header .me {
@@ -906,9 +906,9 @@ p {
 #header .me img {
   width: 100%;
   height: auto;
-  max-height: 520px;
+  max-height: 420px;
   object-fit: contain;
-  transform: scale(1.1);
+  transform: scale(1.02);
   transform-origin: bottom center;
   filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
 }
@@ -982,24 +982,29 @@ p {
 }
 
 #header .points {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  grid-column: 1 / -1;
+  position: relative;
   width: 100%;
   max-width: 1100px;
+  margin: 15px auto 0;
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.2rem;
   background: rgba(var(--bg-secondary-rgb), 0.7);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   border: var(--gray-border);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), var(--border-shadow);
-  padding: 1.8rem 2.2rem;
+  padding: 1.4rem 2rem;
   border-radius: var(--radius-3);
   transition: all 0.3s ease;
+}
+
+[data-theme="light"] #header .points {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 #header .point {
@@ -1013,11 +1018,31 @@ p {
     border-right: 1.5px solid rgba(255, 255, 255, 0.2);
     padding-right: 1.2rem;
   }
+
+  [data-theme="light"] #header .point:not(:last-child) {
+    border-right-color: rgba(0, 0, 0, 0.12);
+  }
 }
 
 #header .point .flex {
-  align-items: center;
-  gap: 5px;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 3px;
+}
+
+#header .point .odometer,
+#header .point .sub__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1;
+  margin: 0;
+}
+
+#header .point .text__muted {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-muted);
 }
 
 #header .points .spotlight {
@@ -1130,6 +1155,7 @@ p {
     justify-content: center;
   }
 
+  #header .point .odometer,
   #header .point .sub__title {
     font-size: 22px;
   }
