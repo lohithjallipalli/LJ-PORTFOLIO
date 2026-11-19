@@ -110,8 +110,8 @@ function App() {
           '-=0.2'
         )
         .from('#header .user__info .buttons', { opacity: 0, y: 15, duration: 0.35, ease: 'power2.out' }, '-=0.15')
-        .from('#header .points', { opacity: 0, y: 15, duration: 0.35, ease: 'power2.out' }, '-=0.15')
-        .from('#header .point', { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }, '-=0.2');
+        .from('#header .points', { opacity: 0, y: 15, duration: 0.35, ease: 'power2.out', clearProps: 'all' }, '-=0.15')
+        .from('#header .point', { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out', clearProps: 'all' }, '-=0.2');
 
       // About Scroll Animation (Staggered header & blocks)
       const tlAbout = gsap.timeline({

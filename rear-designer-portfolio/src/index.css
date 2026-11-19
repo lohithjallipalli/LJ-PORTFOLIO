@@ -880,19 +880,19 @@ p {
 
 #header .container {
   min-height: auto;
-  padding-top: 85px;
-  padding-bottom: 25px;
+  padding-top: 65px;
+  padding-bottom: 20px;
   overflow: visible;
 }
 
 #header .grid {
   display: grid;
-  grid-template-columns: minmax(320px, 420px) 1fr;
-  gap: 35px;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 30px;
   align-items: center;
   position: relative;
   z-index: 1;
-  padding-bottom: 10px;
+  padding-bottom: 0;
 }
 
 #header .me {
@@ -906,7 +906,7 @@ p {
 #header .me img {
   width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 330px;
   object-fit: contain;
   transform: scale(1.02);
   transform-origin: bottom center;
@@ -914,14 +914,15 @@ p {
 }
 
 #header .description {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 15px;
+  line-height: 23px;
+  max-width: 650px;
 }
 
 #header .buttons {
   align-items: center;
-  gap: 20px;
-  margin: 30px 0;
+  gap: 15px;
+  margin: 20px 0 0;
   flex-wrap: wrap;
 }
 
@@ -982,7 +983,6 @@ p {
 }
 
 #header .points {
-  grid-column: 1 / -1;
   position: relative;
   width: 100%;
   max-width: 1100px;
@@ -996,7 +996,7 @@ p {
   backdrop-filter: blur(25px);
   border: var(--gray-border);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), var(--border-shadow);
-  padding: 1.4rem 2rem;
+  padding: 1.1rem 1.6rem;
   border-radius: var(--radius-3);
   transition: all 0.3s ease;
 }

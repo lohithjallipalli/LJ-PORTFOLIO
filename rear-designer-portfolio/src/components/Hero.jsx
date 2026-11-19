@@ -48,49 +48,49 @@ export default function Hero() {
               <a href="#contact" className="btn btn__primary">Contact Me</a>
             </div>
           </div>
+        </div>
 
-          <div className="points">
-            <div className="spotlight"></div>
-            {/* Point Start */}
-            <div className="point">
-              <div className="flex">
-                <Odometer value={2} />
-                <h3 className="sub__title">+</h3>
-              </div>
-              <p className="text__muted">Internships</p>
+        <div className="points">
+          <div className="spotlight"></div>
+          {/* Point Start */}
+          <div className="point">
+            <div className="flex">
+              <Odometer value={2} />
+              <h3 className="sub__title">+</h3>
             </div>
-            {/* Point End */}
-
-            {/* Point Start */}
-            <div className="point">
-              <div className="flex">
-                <Odometer value={100} />
-                <h3 className="sub__title">+</h3>
-              </div>
-              <p className="text__muted">Leet code problems</p>
-            </div>
-            {/* Point End */}
-
-            {/* Point Start */}
-            <div className="point">
-              <div className="flex">
-                <Odometer value={5} />
-                <h3 className="sub__title">+</h3>
-              </div>
-              <p className="text__muted">Realtime projects delivered</p>
-            </div>
-            {/* Point End */}
-
-            {/* Point Start */}
-            <div className="point">
-              <div className="flex">
-                <Odometer value={6} />
-                <h3 className="sub__title">+</h3>
-              </div>
-              <p className="text__muted">Active GitHub repos</p>
-            </div>
-            {/* Point End */}
+            <p className="text__muted">Internships</p>
           </div>
+          {/* Point End */}
+
+          {/* Point Start */}
+          <div className="point">
+            <div className="flex">
+              <Odometer value={100} />
+              <h3 className="sub__title">+</h3>
+            </div>
+            <p className="text__muted">Leet code problems</p>
+          </div>
+          {/* Point End */}
+
+          {/* Point Start */}
+          <div className="point">
+            <div className="flex">
+              <Odometer value={5} />
+              <h3 className="sub__title">+</h3>
+            </div>
+            <p className="text__muted">Realtime projects delivered</p>
+          </div>
+          {/* Point End */}
+
+          {/* Point Start */}
+          <div className="point">
+            <div className="flex">
+              <Odometer value={6} />
+              <h3 className="sub__title">+</h3>
+            </div>
+            <p className="text__muted">Active GitHub repos</p>
+          </div>
+          {/* Point End */}
         </div>
       </div>
     </section>
