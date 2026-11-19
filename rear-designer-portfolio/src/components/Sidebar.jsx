@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Home, User, Wrench, FolderGit2, Award, Mail, ExternalLink } from 'lucide-react';
+import { X, Home, User, Briefcase, FolderGit2, Award, Mail, ExternalLink } from 'lucide-react';
 
 export default function Sidebar({ sidebarOpen, setSidebarOpen, activeSection }) {
   // Prevent background scroll when sidebar is open
@@ -17,7 +17,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen, activeSection }) 
   const navLinks = [
     { href: '#header', label: 'Home', id: 'header', icon: Home },
     { href: '#about', label: 'About', id: 'about', icon: User },
-    { href: '#skills', label: 'Skills', id: 'skills', icon: Wrench },
+    { href: '#experience', label: 'Experience', id: 'experience', icon: Briefcase },
     { href: '#projects', label: 'Projects', id: 'projects', icon: FolderGit2 },
     { href: '#certifications', label: 'Certifications', id: 'certifications', icon: Award },
     { href: '#contact', label: 'Contact', id: 'contact', icon: Mail },

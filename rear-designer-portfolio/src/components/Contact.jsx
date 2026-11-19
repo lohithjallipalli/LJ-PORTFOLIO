@@ -124,6 +124,13 @@ export default function Contact() {
   return (
     <section id="contact">
       <div className="container">
+        {/* Section Header */}
+        <div className="section__header">
+          <h2 className="sub__title">
+            Contact <span className="primary">Me</span>
+          </h2>
+        </div>
+
         <div className="left__column">
           <div className="box">
             <div className="cluster">
@@ -167,7 +174,7 @@ export default function Contact() {
                 </div>
                 <div className="details">
                   <h3 className="name">Address</h3>
-                  <p className="text__muted value">Chintalapudi, Andhra Pradesh</p>
+                  <p className="text__muted value">Hyderabad, India</p>
                 </div>
               </div>
               {/* Option End */}

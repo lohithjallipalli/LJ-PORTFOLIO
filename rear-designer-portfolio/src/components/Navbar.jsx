@@ -25,8 +25,8 @@ export default function Navbar({ isDropped, activeSection, darkMode, setDarkMode
           <a href="#about" className={`route ${activeSection === 'about' ? 'active' : ''}`}>
             About
           </a>
-          <a href="#skills" className={`route ${activeSection === 'skills' ? 'active' : ''}`}>
-            Skills
+          <a href="#experience" className={`route ${activeSection === 'experience' ? 'active' : ''}`}>
+            Experience
           </a>
           <a href="#projects" className={`route ${activeSection === 'projects' ? 'active' : ''}`}>
             Projects

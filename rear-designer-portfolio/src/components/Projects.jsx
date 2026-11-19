@@ -13,26 +13,6 @@ export default function Projects() {
           <h2 className="sub__title">
             My Recent <span className="primary">Projects</span>
           </h2>
-          <p className="description">
-            Explore my latest work, blending creativity and code for functional,
-            responsive applications with clean design and seamless user experiences.
-          </p>
-
-          {/* Small Total Projects Count Card */}
-          <div className="projects-count-card">
-            <div className="projects-count-icon-wrapper">
-              <FolderGit2 size={16} />
-            </div>
-            <div className="projects-count-content">
-              <div className="projects-count-value-row">
-                <span className="projects-count-number">
-                  {projectsData.length < 10 ? `0${projectsData.length}` : projectsData.length}
-                </span>
-                <span className="projects-count-indicator" title="Active & Deployed"></span>
-              </div>
-              <span className="projects-count-label">Total Projects</span>
-            </div>
-          </div>
         </div>
         <div className="projects-grid">
           {projectsData.map((project, index) => (

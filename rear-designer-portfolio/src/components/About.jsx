@@ -6,21 +6,86 @@ import {
   Globe,
   FileText,
   Download,
-  GraduationCap,
-  Briefcase,
   Award,
-  SquareArrowOutUpRight
+  Briefcase,
+  Terminal,
+  Flame,
+  Database,
+  Layers,
+  Server,
+  Braces,
+  Wrench,
+  GitBranch,
+  Binary,
+  Shield,
+  ClipboardList,
+  FileCode,
+  X,
+  Sparkles
 } from 'lucide-react';
 import CustomIcon from './CustomIcon';
-import { tabData } from '../data/portfolioData';
+import { skillsData } from '../data/portfolioData';
+
+const iconMap = {
+  Code: <Code size={16} />,
+  Terminal: <Terminal size={16} />,
+  Flame: <Flame size={16} />,
+  Database: <Database size={16} />,
+  Layers: <Layers size={16} />,
+  Server: <Server size={16} />,
+  Braces: <Braces size={16} />,
+  Wrench: <Wrench size={16} />,
+  GitBranch: <GitBranch size={16} />,
+  Binary: <Binary size={16} />,
+  Shield: <Shield size={16} />,
+  ClipboardList: <ClipboardList size={16} />,
+  FileCode: <FileCode size={16} />,
+};
+
+const modalIconMap = {
+  Code: <Code size={24} />,
+  Terminal: <Terminal size={24} />,
+  Flame: <Flame size={24} />,
+  Database: <Database size={24} />,
+  Layers: <Layers size={24} />,
+  Server: <Server size={24} />,
+  Braces: <Braces size={24} />,
+  Wrench: <Wrench size={24} />,
+  GitBranch: <GitBranch size={24} />,
+  Binary: <Binary size={24} />,
+  Shield: <Shield size={24} />,
+  ClipboardList: <ClipboardList size={24} />,
+  FileCode: <FileCode size={24} />,
+};
 
 export default function About() {
-  const [activeTab, setActiveTab] = useState('Education');
+  const [selectedSkillCategory, setSelectedSkillCategory] = useState('ALL');
+  const [selectedSkillDetails, setSelectedSkillDetails] = useState(null);
+
+  const categories = [
+    { id: 'ALL', label: 'All Arsenal' },
+    { id: 'SERVICENOW', label: 'ServiceNow' },
+    { id: 'LANGUAGES', label: 'Languages' },
+    { id: 'FRAMEWORKS & BAAS', label: 'Frameworks' },
+    { id: 'DATABASES & DEVOPS', label: 'DB & Tools' },
+  ];
+
+  const filteredSkills = skillsData.filter((skill) => {
+    return selectedSkillCategory === 'ALL' || skill.category === selectedSkillCategory;
+  });
 
   return (
     <section id="about">
-      <div className="container grid">
-        {/* Box Start */}
+      <div className="container">
+        {/* Section Header */}
+        <div className="section__header">
+          <h2 className="sub__title">
+            About <span className="primary">Me</span>
+          </h2>
+        </div>
+
+        <div className="grid">
+          {/* Box 1: Profile Card */}
         <div className="box about-profile-card">
           <img src="./assets/me1.png" className="profile-bg" alt="Jallipalli Lohith" />
 
@@ -72,69 +137,95 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* Box End */}
+        {/* Box 1 End */}
 
-        {/* Box Start */}
-        <div className="col-2 box about-tabs-card">
-          <div className="tabs-header">
-            <button
-              className={`tab-btn ${activeTab === 'Education' ? 'active' : ''}`}
-              onClick={() => setActiveTab('Education')}
-            >
-              <GraduationCap size={14} /> Education
-            </button>
-            <button
-              className={`tab-btn ${activeTab === 'Experience' ? 'active' : ''}`}
-              onClick={() => setActiveTab('Experience')}
-            >
-              <Briefcase size={14} /> Experience
-            </button>
-            <button
-              className={`tab-btn ${activeTab === 'Journey' ? 'active' : ''}`}
-              onClick={() => setActiveTab('Journey')}
-            >
-              <Code size={14} /> Journey
-            </button>
-            <button
-              className={`tab-btn ${activeTab === 'Achievements' ? 'active' : ''}`}
-              onClick={() => setActiveTab('Achievements')}
-            >
-              <Award size={14} /> Achievements
-            </button>
+        {/* Box 2 (col-2): Technical Skills Capsules Card (Replaces old tabs card) */}
+        <div className="col-2 box about-skills-card">
+          {/* Card Top Header */}
+          <div className="about-skills-header">
+            <div className="about-skills-title-group">
+              <span className="skills-badge-icon">
+                <Sparkles size={16} />
+              </span>
+              <h3 className="about-skills-title">
+                Technical <span className="primary">Skills</span>
+              </h3>
+            </div>
+            <span className="skills-count-pill">
+              {filteredSkills.length} of {skillsData.length} Skills
+            </span>
           </div>
 
-          <div className="tabs-content-scroll">
-            <div className="timeline-container">
-              {tabData[activeTab].map((item, idx) => (
-                <div key={idx} className="timeline-item">
-                  <span className="timeline-dot"></span>
-                  <div className="timeline-header">
-                    <h4 className="timeline-title">
-                      {item.title}
-                      {item.link && (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="timeline-link" title="View Certificate">
-                          <SquareArrowOutUpRight size={12} />
-                        </a>
-                      )}
-                    </h4>
-                    {item.date && <span className="timeline-date">{item.date}</span>}
+          {/* Category Filter Tabs */}
+          <div className="about-skills-tabs">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                className={`about-skills-tab-btn ${selectedSkillCategory === cat.id ? 'active' : ''}`}
+                onClick={() => setSelectedSkillCategory(cat.id)}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Skills Capsules Grid */}
+          <div className="about-skills-scroll">
+            <div className="skills-capsules-container">
+              {filteredSkills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="skill-capsule"
+                  onClick={() => setSelectedSkillDetails(skill)}
+                  title="Click to view details"
+                >
+                  <div
+                    className="capsule-icon-wrap"
+                    style={{ color: skill.color || 'var(--color-primary)' }}
+                  >
+                    {iconMap[skill.icon] || <Code size={16} />}
                   </div>
-                  {item.subtitle && <p className="timeline-subtitle">{item.subtitle}</p>}
-                  {item.bullets && item.bullets.length > 0 && (
-                    <ul className="timeline-bullets">
-                      {item.bullets.map((bullet, bIdx) => (
-                        <li key={bIdx}>{bullet}</li>
-                      ))}
-                    </ul>
-                  )}
+                  <span className="capsule-name">{skill.name}</span>
+                  <div
+                    className="capsule-indicator-wrap"
+                    title={`${skill.percentage}% Proficiency`}
+                  >
+                    <svg
+                      className="capsule-indicator-svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                    >
+                      <circle
+                        className="capsule-indicator-track"
+                        cx="10"
+                        cy="10"
+                        r="7"
+                        strokeWidth="2.2"
+                      />
+                      <circle
+                        className="capsule-indicator-fill"
+                        cx="10"
+                        cy="10"
+                        r="7"
+                        strokeWidth="2.2"
+                        stroke={skill.color || 'var(--color-primary)'}
+                        strokeDasharray={43.98}
+                        strokeDashoffset={43.98 - (43.98 * skill.percentage) / 100}
+                        strokeLinecap="round"
+                        transform="rotate(-90 10 10)"
+                      />
+                    </svg>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        {/* Box End */}
+        {/* Box 2 End */}
 
-        {/* Box Start: What Drives Me */}
+        {/* Box 3: What Drives Me */}
         <div className="box my-drive-compact">
           <div className="spotlight"></div>
           <div className="my__drive">
@@ -149,9 +240,9 @@ export default function About() {
           </div>
           <CustomIcon name="grid-wire-frame" className="kit grid__wireframe" />
         </div>
-        {/* Box End */}
+        {/* Box 3 End */}
 
-        {/* Box Start: Journey Metrics beside What Drives Me */}
+        {/* Box 4: Journey Metrics beside What Drives Me */}
         <div className="box about-journey-metrics-box">
           <div className="about-journey-metrics-grid">
             <div className="about-metric-card">
@@ -176,8 +267,56 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* Box End */}
+        {/* Box 4 End */}
+        </div>
       </div>
+
+      {/* Skill Details Modal */}
+      {selectedSkillDetails && (
+        <div className="skill-modal-overlay" onClick={() => setSelectedSkillDetails(null)}>
+          <div className="skill-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="skill-modal-close-icon"
+              onClick={() => setSelectedSkillDetails(null)}
+              aria-label="Close modal"
+            >
+              <X size={24} />
+            </button>
+
+            <div className="skill-modal-header">
+              <div className="skill-modal-icon-container">
+                {modalIconMap[selectedSkillDetails.icon] || <Code size={24} />}
+              </div>
+              <div className="skill-modal-title-block">
+                <h3 className="skill-modal-title">{selectedSkillDetails.name}</h3>
+                <div className="skill-modal-badges">
+                  <span className="skill-modal-badge category">{selectedSkillDetails.category}</span>
+                  <span className={`skill-modal-badge level ${selectedSkillDetails.level.toLowerCase()}`}>
+                    {selectedSkillDetails.level} ({selectedSkillDetails.percentage}%)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="skill-modal-body">
+              <h4 className="skill-modal-section-title">SKILL EVALUATION</h4>
+              <hr className="skill-modal-divider" />
+              <p className="skill-modal-description">
+                {selectedSkillDetails.description || 'Details will be updated soon.'}
+              </p>
+            </div>
+
+            <button
+              type="button"
+              className="skill-modal-close-btn"
+              onClick={() => setSelectedSkillDetails(null)}
+            >
+              CLOSE EVALUATION
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

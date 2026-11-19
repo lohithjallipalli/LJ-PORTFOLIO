@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
@@ -113,30 +113,39 @@ function App() {
         .from('#header .points', { opacity: 0, y: 15, duration: 0.35, ease: 'power2.out' }, '-=0.15')
         .from('#header .point', { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }, '-=0.2');
 
-      // About Scroll Animation (Staggered slide-up for blocks)
-      gsap.from('#about .box', {
+      // About Scroll Animation (Staggered header & blocks)
+      const tlAbout = gsap.timeline({
         scrollTrigger: {
           trigger: '#about',
           start: 'top 85%',
         },
-        opacity: 0,
-        y: 15,
-        stagger: 0.08,
-        duration: 0.35,
-        ease: 'power2.out',
       });
+      tlAbout
+        .from('#about .section__header .sub__title', {
+          opacity: 0,
+          y: 15,
+          duration: 0.35,
+          ease: 'power2.out',
+        })
+        .from(
+          '#about .box',
+          { opacity: 0, y: 15, stagger: 0.08, duration: 0.35, ease: 'power2.out' },
+          '-=0.15'
+        );
 
-      // Skills Scroll Animation (Staggered header)
-      const tlSkills = gsap.timeline({
+      // Experience Scroll Animation (Staggered header)
+      const tlExperience = gsap.timeline({
         scrollTrigger: {
-          trigger: '#skills',
+          trigger: '#experience',
           start: 'top 85%',
         },
       });
-      tlSkills.from(
-        ['#skills .section__header .sub__title', '#skills .section__header .description'],
-        { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }
-      );
+      tlExperience.from('#experience .section__header .sub__title', {
+        opacity: 0,
+        y: 15,
+        duration: 0.35,
+        ease: 'power2.out',
+      });
 
       // Projects Scroll Animation (Staggered header)
       const tlProjects = gsap.timeline({
@@ -145,10 +154,12 @@ function App() {
           start: 'top 85%',
         },
       });
-      tlProjects.from(
-        ['#projects .section__header .sub__title', '#projects .section__header .description'],
-        { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }
-      );
+      tlProjects.from('#projects .section__header .sub__title', {
+        opacity: 0,
+        y: 15,
+        duration: 0.35,
+        ease: 'power2.out',
+      });
 
       // Certifications Scroll Animation
       const tlCertifications = gsap.timeline({
@@ -157,10 +168,13 @@ function App() {
           start: 'top 85%',
         },
       });
-      tlCertifications.from(
-        ['#certifications .section__header .sub__title', '#certifications .section__header .description'],
-        { opacity: 0, y: 15, stagger: 0.06, duration: 0.35, ease: 'power2.out' }
-      );
+      tlCertifications.from(['#certifications .section__header .sub__title', '#certifications .cert-count-pill'], {
+        opacity: 0,
+        y: 15,
+        stagger: 0.06,
+        duration: 0.35,
+        ease: 'power2.out',
+      });
 
       // Contact Scroll Animation (Staggered side boxes and form)
       const tlContact = gsap.timeline({
@@ -200,7 +214,7 @@ function App() {
       />
       <Hero />
       <About />
-      <Skills />
+      <Experience />
       <Projects />
       <Certifications />
       <Contact />

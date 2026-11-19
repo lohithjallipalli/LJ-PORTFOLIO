@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="footer-brand-name">LOHITH</span>
             </div>
             <p className="footer-brand-description">
-              AI/DS undergraduate student and Java developer passionate
+              AI/DS undergraduate student and developer passionate
               about building amazing digital experiences and solving complex problems.
             </p>
             <div className="footer-socials">
@@ -53,7 +53,8 @@ export default function Footer() {
             <div className="footer-links-list">
               <a href="#header" className="footer-link-item">HOME</a>
               <a href="#about" className="footer-link-item">ABOUT ME</a>
-              <a href="#skills" className="footer-link-item">MY SKILLS</a>
+              <a href="#experience" className="footer-link-item">EXPERIENCE</a>
+              <a href="#contact" className="footer-link-item">CONTACT</a>
             </div>
           </div>
 
@@ -61,10 +62,8 @@ export default function Footer() {
           <div className="column">
             <h3 className="footer-group-title">WORK & PROJECTS</h3>
             <div className="footer-links-list">
-              <a href="#about" className="footer-link-item">EXPERIENCE</a>
               <a href="#projects" className="footer-link-item">PROJECTS</a>
               <a href="#certifications" className="footer-link-item">CERTIFICATIONS</a>
-              <a href="#about" className="footer-link-item">CODING JOURNEY</a>
             </div>
           </div>
 
@@ -92,10 +91,6 @@ export default function Footer() {
           <span className="footer-bottom-text">
             &copy; 2026 JALLIPALLI LOHITH. CRAFTED WITH ❤️ USING REACT & VITE.
           </span>
-          <div className="footer-bottom-links">
-            <a href="#skills" className="footer-bottom-link">SKILLS</a>
-            <a href="#contact" className="footer-bottom-link">CONTACT</a>
-          </div>
         </div>
       </div>
     </footer>

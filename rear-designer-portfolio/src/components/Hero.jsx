@@ -5,7 +5,7 @@ import Odometer from './Odometer';
 
 export default function Hero() {
   return (
-    <section id="header" className="bg__secondary">
+    <section id="header">
       <div className="spotlight"></div>
       <div className="container">
         <div className="grid">

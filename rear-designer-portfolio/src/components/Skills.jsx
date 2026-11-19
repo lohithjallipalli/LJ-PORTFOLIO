@@ -99,7 +99,7 @@ export default function Skills() {
   });
 
   return (
-    <section id="skills" className="bg__secondary">
+    <section id="skills">
       <div className="container">
         <div className="section__header">
           <h2 className="sub__title">My <span className="primary">Skills</span></h2>

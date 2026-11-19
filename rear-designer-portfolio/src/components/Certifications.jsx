@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { 
-  Award, 
-  ShieldCheck, 
-  Database, 
-  Terminal, 
-  Code, 
-  Globe, 
-  Briefcase, 
-  Layers, 
-  Zap, 
+import {
+  Award,
+  ShieldCheck,
+  Database,
+  Terminal,
+  Code,
+  Globe,
+  Briefcase,
+  Layers,
+  Zap,
   TrendingUp,
   SquareArrowOutUpRight,
   Sparkles
@@ -45,16 +45,13 @@ export default function Certifications() {
       <div className="container">
         <div className="section__header">
           <h2 className="sub__title">
-            LICENSES & <span className="primary">CERTIFICATIONS</span>
+            Licenses & <span className="primary">Certifications</span>
           </h2>
-          <p className="description">
-            Officially verified credentials, industry certificates, and platform specializations.
-          </p>
+        </div>
 
-          <div className="cert-count-pill">
-            <Sparkles size={14} className="primary" />
-            <span>{certificationsData.length} Verified Credentials</span>
-          </div>
+        <div className="cert-count-pill">
+          <Sparkles size={14} className="primary" />
+          <span>{certificationsData.length} Verified Credentials</span>
         </div>
 
         {/* Category Filter Tabs */}
